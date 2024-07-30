@@ -1,6 +1,7 @@
 {
   "cards": {
     "Copper": {
+      "description": "Costs 0 coins. When played +1 coins",
       "supply": {
         "2": 60,
         "3": 60,
@@ -14,6 +15,7 @@
       "treasure": 1
     },
     "Silver": {
+      "description": "Costs 3 coins. When played +2 coins",
       "supply": {
         "2": 40,
         "3": 40,
@@ -27,6 +29,7 @@
       "treasure": 2
     },
     "Gold": {
+      "description": "Costs 6 coins. When played +3 coins",
       "supply": {
         "2": 30,
         "3": 30,
@@ -40,6 +43,7 @@
       "treasure": 3
     },
     "Platinum": {
+      "description": "",
       "supply": {
         "2": 12,
         "3": 12,
@@ -53,12 +57,13 @@
       "treasure": 5
     },
     "Curse": {
+      "description": "Costs 0 coins. Worth -1 victory points",
       "supply": {
         "2": 10,
         "3": 20,
         "4": 30
       },
-      "includeCondition": "prosperity",
+      "includeCondition": ["Witch"],
       "cost": 0,
       "type": {
         "Curse": true
@@ -73,6 +78,7 @@
       ]
     },
     "Estate": {
+      "description": "Costs 2 coins. Worth 1 victory point",
       "supply": {
         "2": 8,
         "3": 12,
@@ -93,6 +99,7 @@
       ]
     },
     "Duchy": {
+      "description": "Costs 5 coins. Worth 3 victory points",
       "supply": {
         "2": 8,
         "3": 12,
@@ -113,6 +120,7 @@
       ]
     },
     "Province": {
+      "description": "Costs 8 coins. Worth 6 victory points",
       "supply": {
         "2": 8,
         "3": 12,
@@ -133,6 +141,7 @@
       ]
     },
     "Colony": {
+      "description": "Costs 11 coins. Worth 10 victory points",
       "supply": {
         "2": 8,
         "3": 12,
@@ -152,7 +161,219 @@
         }
       ]
     },
+    "Harbinger": {
+      "description": "Costs 3 coins. When played +1 Card +1 Action - Look through your discard pile. You may put a card from it onto your deck.",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 3,
+      "type": {
+        "Action": true
+      },
+      "effects": [
+        {
+          "name": "plusCard",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "plusAction",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "putOnDeckFromDiscard"
+        }
+      ]
+    },
+    "Merchant": {
+      "description": "Costs 3 coins. When played +1 Card +1 Action - The first time you play a Silver this turn, +1 coin",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 3,
+      "type": {
+        "Action": true
+      },
+      "effects": [
+        {
+          "name": "plusCard",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "plusAction",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "extraCoinFromFirstSilver"
+        }
+      ]
+    },
+    "Vassal": {
+      "description": "Costs 3 coins. When played +2 coins - Discard the top card of your deck. If it is an Action card, you may play it.",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 3,
+      "type": {
+        "Action": true
+      },
+      "effects": [
+        {
+          "name": "plusTreasure",
+          "params": {
+            "amount": 2
+          }
+        },
+        {
+          "name": "maybeTopDeckAnAction"
+        }
+      ]
+    },
+    "Poacher": {
+      "description": "Costs 4 coins. When played +1 Card +1 Action +1 Coins - Discard a card per empty Supply pile.",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 4,
+      "type": {
+        "Action": true
+      },
+      "effects": [
+        {
+          "name": "plusCard",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "plusAction",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "plusTreasure",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "discardPerEmptySupply"
+        }
+      ]
+    },
+    "Bandit": {
+      "description": "Costs 5 coins. When played Gain a Gold. Each other player reveals the top 2 cards of their deck, trashes a revealed Treasure other than Copper, and discards the rest.",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 5,
+      "type": {
+        "Action": true,
+        "Attack": true
+      },
+      "effects": [
+        {
+          "name": "gainCard",
+          "params": {
+            "name": "Gold",
+            "onTopOfDeck": false
+          }
+        },
+        {
+          "name": "attackRevealAndTrashTreasure"
+        }
+      ]
+    },
+    "Sentry": {
+      "description": "Costs 5 coins. When played +1 Card +1 Action - Look at the top 2 cards of your deck. Trash and/or discard any number of them. Put the rest back on top in any order.",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 5,
+      "type": {
+        "Action": true
+      },
+      "effects": [
+        {
+          "name": "plusCard",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "plusAction",
+          "params": {
+            "amount": 1
+          }
+        },
+        {
+          "name": "revealAndTrash"
+        }
+      ]
+    },
+    "Artisan": {
+      "description": "Costs 6 coins. When played Gain a card to your hand costing up to 5 coins. Put a card from your hand onto your deck.",
+      "supply": {
+        "2": 10,
+        "3": 10,
+        "4": 10
+      },
+      "includeCondition": "kingdomCard",
+      "set": "Base Set",
+      "cost": 6,
+      "type": {
+        "Action": true
+      },
+      "effects": [
+        {
+          "name": "gainCard",
+          "params": {
+            "costingUpTo": 5,
+            "intoHand": true
+          }
+        },
+        {
+          "name": "putCardsOnDeck",
+          "params": {
+            "amount": 1
+          }
+        }
+      ]
+    },
     "Cellar": {
+      "description": "Costs 2 coins. When played +1 Action - Discard any number of cards, then draw that many.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -177,6 +398,7 @@
       ]
     },
     "Chapel": {
+      "description": "Costs 2 coins. When played trash up to 4 cards from your hand.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -199,6 +421,7 @@
       ]
     },
     "Moat": {
+      "description": "Costs 2 coins. When played +2 Cards - When another player plays an Attack card, you may first reveal this from your hand, to be unaffected by it.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -231,31 +454,8 @@
         ]
       }
     },
-    "Chancellor": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 2
-          }
-        },
-        {
-          "name": "discardDeck"
-        }
-      ]
-    },
     "Village": {
+      "description": "Costs 3 coins. When played +1 Card +2 Actions",
       "supply": {
         "2": 10,
         "3": 10,
@@ -282,34 +482,8 @@
         }
       ]
     },
-    "Woodcutter": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusBuy",
-          "params": {
-            "amount": 1
-          }
-        },
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 2
-          }
-        }
-      ]
-    },
     "Workshop": {
+      "description": "Costs 3 coins. When played Gain a card costing up to 4 coins.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -331,6 +505,7 @@
       ]
     },
     "Bureaucrat": {
+      "description": "Costs 4 coins. When played Gain a Silver onto your deck. Each other player reveals a Victory card from their hand and puts it onto their deck (or reveals a hand with no Victory cards).",
       "supply": {
         "2": 10,
         "3": 10,
@@ -363,31 +538,8 @@
         }
       ]
     },
-    "Feast": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "trashThisCard"
-        },
-        {
-          "name": "gainCard",
-          "params": {
-            "costingUpTo": 5
-          }
-        }
-      ]
-    },
     "Gardens": {
+      "description": "Cost 4 coins. Worth 1 victory point per 10 cards you have (round down).",
       "supply": {
         "2": 8,
         "3": 12,
@@ -410,6 +562,7 @@
       ]
     },
     "Militia": {
+      "description": "Costs 4 coins. When played +2 Coins - Each other player discards down to 3 cards in hand.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -438,6 +591,7 @@
       ]
     },
     "Moneylender": {
+      "description": "Costs 4 coins. You may trash a Copper from your hand for +3 coins.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -468,6 +622,7 @@
       ]
     },
     "Remodel": {
+      "description": "Costs 4 coins. Trash a card from your hand. Gain a card costing up to 2 coins more than it.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -496,6 +651,7 @@
       ]
     },
     "Smithy": {
+      "description": "Costs 4 coins. When played +3 Cards.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -516,57 +672,8 @@
         }
       ]
     },
-    "Spy": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true,
-        "Attack": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
-        },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
-        },
-        {
-          "name": "attackSpy"
-        }
-      ]
-    },
-    "Thief": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true,
-        "Attack": true
-      },
-      "effects": [
-        {
-          "name": "attackThief"
-        }
-      ]
-    },
     "Throne Room": {
+      "description": "Costs 4 coins. When played you may play an Action card from your hand twice.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -588,6 +695,7 @@
       ]
     },
     "Council Room": {
+      "description": "Costs 5 coins. When played +4 Cards +1 Buy - Each other player draws a card.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -621,6 +729,7 @@
       ]
     },
     "Festival": {
+      "description": "Costs 5 coins. When played +2 Actions +1 Buy +2 Coins",
       "supply": {
         "2": 10,
         "3": 10,
@@ -654,6 +763,7 @@
       ]
     },
     "Laboratory": {
+      "description": "Costs 5 coins. When played +2 Cards +1 Action",
       "supply": {
         "2": 10,
         "3": 10,
@@ -681,6 +791,7 @@
       ]
     },
     "Library": {
+      "description": "Costs 5 coins. When played Draw until you have 7 cards in hand, skipping any Action cards you choose to; set those aside, discarding them afterwards.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -699,6 +810,7 @@
       ]
     },
     "Market": {
+      "description": "Costs 5 coins. When played +1 Card +1 Action +1 Buy +1 Coins",
       "supply": {
         "2": 10,
         "3": 10,
@@ -738,6 +850,7 @@
       ]
     },
     "Mine": {
+      "description": "Costs 5 coins. When played You may trash a Treasure from your hand. Gain a Treasure to your hand costing up to 3 coins more than it.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -769,6 +882,7 @@
       ]
     },
     "Witch": {
+      "description": "Costs 5 coins. When played +2 Cards - Each other player gains a Curse.",
       "supply": {
         "2": 10,
         "3": 10,
@@ -793,37 +907,6 @@
           "params": {
             "name": "Curse"
           }
-        }
-      ]
-    },
-    "Adventurer": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 6,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "revealUntilCard",
-          "params": {
-            "type": "Treasure",
-            "amount": 2
-          }
-        },
-        {
-          "name": "putRevealedCardsIntoHand",
-          "params": {
-            "type": "Treasure"
-          }
-        },
-        {
-          "name": "discardRevealedCards"
         }
       ]
     },
