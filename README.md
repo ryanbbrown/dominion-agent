@@ -66,7 +66,7 @@ If you aren't familiar with ELO the gist is that every 400 points on the scale r
 |------|-------------------------------|------|
 | 1    | gpt-4o                        | 1377 |
 | 1    | claude-3-5-sonnet             | 1377 |
-| 2    | llama3.1-505B-instruct-turbo  | 1223 |
+| 2    | llama3.1-405B-instruct-turbo  | 1223 |
 | 3    | naive                         | 1143 |
 | 4    | llama3.1-70B-instruct-turbo   | 1132 |
 | 5    | gpt-4o-mini                   | 420  |
@@ -79,9 +79,9 @@ The rankings show that small models and large models are on a different playing 
 ## Remarks and Future Explorations
 * Each inference in my experiment is limited to <4k tokens, but many models can accommodate many more tokens. It would be interesting to explore testing if providing more context (in the form of more detailed logs, strategy articles from the internet, etc...) results in measurably improved performance.
 * Comparing these models with current state of the art Dominion AIs would not be interesting. The LLMs would be crushed.
-* The 8B and 70B Llama models aren't even in the same league. However, the 505B model only beats the 70B model in 2/3rds of games. The private flagship models perform slightly better than the 505B model. These results might imply substantial diminishing returns on reasoning capabilities.
+* The 8B and 70B Llama models aren't even in the same league. However, the 405B model only beats the 70B model in 2/3rds of games. The private flagship models perform slightly better than the 405B model. These results might imply substantial diminishing returns on reasoning capabilities.
 * If much more capable models can exist, this benchmark has plenty of room for growth. I also believe it would be hard for models to game this benchmark. As new models are released, I may come back and update this page with the results.
-* It could be interesting to compare how quantization affects these scores. (ex compare q2/3 505B model vs full weight 70B model) 
+* It could be interesting to compare how quantization affects these scores. (ex compare q2/3 405B model vs full weight 70B model) 
 
 ## Building
 This is essentially two packages, plus some helper scripts.
@@ -106,7 +106,7 @@ AIs available:
   gpt-4 -- (Pretty expensive to run)
   gpt-4o
   gpt-4o-mini
-  llama3.1-505B-instruct-turbo
+  llama3.1-405B-instruct-turbo
   llama3.1-70B-instruct-turbo
   llama3.1-8B-instruct-turbo
   
