@@ -1,8 +1,6 @@
 import { LMStudioClient } from "@lmstudio/sdk";
 
-const client = new LMStudioClient(
-  // { baseUrl: "ws://192.168.86.50:1234" },
-);
+const client = new LMStudioClient();
 
 import { makeAI, RESPONSE_SCHEMA } from "./base";
 
