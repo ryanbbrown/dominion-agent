@@ -95,7 +95,7 @@ This is essentially two packages, plus some helper scripts.
 
 ## Command Line Usage
 ```
-Usage: dominion-cli [--player <AI_Name>] [--seed <seed>]
+Usage: ./lib/main.js [--player <AI_Name>] [--seed <seed>]
 AIs available:
   cli
   lmstudioai -- (Play against a model running locally)
