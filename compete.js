@@ -10,7 +10,7 @@ async function runRound(done) {
     const filteredRankings = rankings.filter(r => !r.exclude);
 
     let player1, player2;
-    const force = 'claude-3-5-sonnet';
+    const force = '';
     do {
         const index = Math.floor(Math.random() * (filteredRankings.length - 1));
         player1 = filteredRankings[index];
