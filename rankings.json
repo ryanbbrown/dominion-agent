@@ -1,47 +1,47 @@
 [
   {
+    "name": "bigmoney",
+    "elo": 958,
+    "exclude": false
+  },
+  {
     "name": "gpt-4o",
-    "elo": 1377,
+    "elo": 958,
     "exclude": false
   },
   {
     "name": "claude-3-5-sonnet",
-    "elo": 1377,
-    "exclude": false
+    "elo": 958,
+    "exclude": true
   },
   {
     "name": "llama3.1-405B-instruct-turbo",
-    "exclude": true,
-    "elo": 1223
+    "elo": 836,
+    "exclude": true
   },
   {
     "name": "naive",
-    "exclude": true,
-    "elo": 1143
+    "elo": 757,
+    "exclude": true
   },
   {
     "name": "llama3.1-70B-instruct-turbo",
-    "exclude": true,
-    "elo": 1132
+    "elo": 745,
+    "exclude": true
   },
   {
     "name": "gpt-4o-mini",
-    "exclude": true,
-    "elo": 420
-  },
-  {
-    "name": "bigmoney",
-    "exclude": true,
-    "elo": 340
+    "elo": 432,
+    "exclude": true
   },
   {
     "name": "llama3.1-8B-instruct-turbo",
-    "exclude": true,
-    "elo": 332
+    "elo": 382,
+    "exclude": true
   },
   {
     "name": "random",
-    "exclude": true,
-    "elo": 0
+    "elo": 0,
+    "exclude": true
   }
 ]

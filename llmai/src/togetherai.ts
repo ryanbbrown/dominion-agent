@@ -10,7 +10,7 @@ export function togetherAI(model: string, json = false) {
     return makeAI(async (chatLog) => {
         const prediction = await together.chat.completions.create({
             model,
-            max_tokens: 256,
+            max_tokens: 512,
             messages: chatLog,
             response_format: json ? { type: 'json_object', schema: RESPONSE_SCHEMA as any } : undefined,
             stream: true,

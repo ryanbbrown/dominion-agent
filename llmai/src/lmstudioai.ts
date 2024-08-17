@@ -7,7 +7,7 @@ import { makeAI, RESPONSE_SCHEMA } from "./base";
 export const chooseMove = makeAI(async (chatLog) => {
   const model = await client.llm.get({});
   const prediction = model.respond(chatLog, {
-    maxPredictedTokens: 256,
+    maxPredictedTokens: 512,
     structured: { type: "json", jsonSchema: RESPONSE_SCHEMA },
   });
 

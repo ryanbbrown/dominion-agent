@@ -1,17 +1,10 @@
-import fs from 'fs';
 import { createInterface } from 'readline';
 
 const RETRY_ATTEMPTS = 10;
 
 export const SYSTEM_PROMPT = `You are an AI playing the card game Dominion.`;
 
-const getGameRules = (supplyDetails: string) => `INSTRUCTIONS
-You will be presented with the current state of the game as well as all valid moves that you can make.
-Choose a move and provide a short explanation why.
-Output should ONLY be JSON of the following format: { "explanation": <string>, "move": <number> }
-Do not include anything else in your response.
-
-GOAL
+const getGameRules = (supplyDetails: string) => `GOAL
 This is a game of building a deck of cards. The deck is your Dominion. It contains your resources, victory points, and the things you can do. It starts out a small sad collection of Estates and Coppers, but you hope by the end of the game it will be brimming with Gold, Provinces, and the inhabitants and structures of your castle and kingdom.
 The player with the most victory points in his Deck at game end wins.
 
@@ -37,27 +30,40 @@ If the player has multiple Buys, he combines Treasure cards and any coins availa
 The Treasure cards remain in the play area until the Clean-up phase. Treasure cards will be used multiple times during the game. Although they are discarded during the Clean-up phase, the player will draw them again as his Discard pile is shuffled into a new Deck. Thus, Treasure cards are a source of income, not a resource that is used up when played. When played, Coppers are worth 1 coin, Silvers are worth 2 coins, and Golds are worth 3 coins.
 
 GAME END
-The game ends at the end of any player’s turn when either: 1) the Supply pile of Province cards is empty or
+The game ends at the end of any player’s turn when either:
+1) the Supply pile of Province cards is empty or
 2) any 3 Supply piles are empty.
 Each player puts all of his cards into his Deck and counts the victory points on all the cards he has.
-The player with the most victory points wins. If the highest scores are tied at the end of the game, the tied player who has had the fewest turns wins the game. If the tied players have had the same number of turns, they rejoice in their shared victory.
+The player with the most victory points wins. If the highest scores are tied at the end of the game, the tied player who has had the fewest turns wins the game.
 
-${supplyDetails}
+${supplyDetails}`;
 
-BASIC STRATEGY TIPS
-* In the early game prioritize buying cards that will improve your deck.
-* You don't want to start buying victory cards too early because they will dilute your deck.
-* Trashing cards can allow you to remove less desirable cards, including coppers and estates, that are diluting your deck.
-`;
+const INSTRUCTIONS_PLAY = `INSTRUCTIONS
+You will be presented with the current state of the game as well as all valid moves that you can make.
+* Summarize the current game based on the logs, available kingdom cards, etc...
+* Outline a strategy the current player should follow. Make sure to consider the cards the current player already owns, the stage of the game, how many remaining provinces there are, etc..
+* Then choose a move and provide a short explanation why.
+
+Output should ONLY be JSON of the following format: 
+{
+  "summary": <string>, 
+  "strategy": <string>,
+  "moveExplanation": <string>,
+  "move": <number>
+}
+  
+Do not include anything else in your response.`;
 
 export const RESPONSE_SCHEMA = {
     type: "object",
     properties: {
         // theory: making it write the explanation first will help ensure the outputted move is coherent.
-        explanation: { type: "string" },
+        summary: { type: "string" },
+        strategy: { type: "string" },
+        moveExplanation: { type: "string" },
         move: { type: "number" },
     },
-    required: ["explanation", "move"],
+    required: ["summary", "strategy", "moveExplanation", "move"],
 };
 
 export type ChatLog = { role: 'system' | 'user' | 'assistant', content: string }[];
@@ -76,11 +82,10 @@ export function makeAI(send: (chatLog: ChatLog) => Promise<string>) {
 
         const chatRequest: ChatLog = [
             { role: "system", content: SYSTEM_PROMPT },
-            { role: "user", content: getGameRules(state.printSupplyDetails()) },
-            { role: "user", content: `Game Log:\n${(state.printLog() as string[]).slice(-100).join('\n')}` },
-            {
-                role: 'user', content: prompt
-            }
+            { role: "user", content: getGameRules(state.printSupplyDetails(true)) },
+            { role: "user", content: INSTRUCTIONS_PLAY },
+            { role: "user", content: `GAME LOG\n${(state.printLog() as string[]).slice(-100).join('\n')}` },
+            { role: 'user', content: prompt },
         ];
 
         let attempts = RETRY_ATTEMPTS;

@@ -15,7 +15,7 @@ export function anthropicAI(model: string) {
 
         const prediction = await anthropic.messages.create({
             model,
-            max_tokens: 256,
+            max_tokens: 512,
             system: SYSTEM_PROMPT,
             messages: mergedChatLog,
         });

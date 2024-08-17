@@ -4,6 +4,19 @@ I wanted to test if LLMs could be used as casual AIs for card/board games. The g
 
 Card games are an interesting application here IMO because they often have flexible rules based on the description of cards in play. This makes writing a procedural AI extremely difficult. However, LLMs obviously excel at understanding these descriptions. The question remains though if LLMs can form a coherent strategy based on the cards in play.
 
+## Edits: 08/17/2024
+The bigmoney AI was not working. I have fixed that and updated the elo rankings. Proper bigmoney seems to be about 50:50 with 4o and Claude. Bigmoney will typically beat novice players but small improvements to bigmoney are consistently better (such as smithy-bigmoney.) Overall, this correction represents a low bar that the LLMs haven't passed.
+
+Additional Changes:
+* Added Dominion wiki strategy guide for each card to the LLMs context.
+* LLMs are prompted to output more strategy before choosing a move.
+* I didn't test if these modifications measurably improved the LLMs ability to play. If they did, it was not substantial.
+* When using the CLI, use `!#` to print the details and strategy guide of the relevant card.
+
+I attempted to add improved prompting to the LLMs. For example, presenting the LLM with its own choice and asking if that was a good move and if not suggesting an alternative move. Then finally asking the LLM to list the pros and cons of the two chosen moves and to make one final choice.
+
+I didn't find this to be very effective. It did often catch when the LLM chose an initial bad move. But just as frequently it would convince itself away from making a good move. 
+
 ## Method
 
 I found an [existing Dominion game engine](https://github.com/andrewrk/dominion) that outputs a log and all possible moves per turn. I feed the logs and turn prompt into the LLM as context in addition to some basic rules, strategies, and card descriptions.
