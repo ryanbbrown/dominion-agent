@@ -75,17 +75,17 @@ If you aren't familiar with ELO the gist is that every 400 points on the scale r
 
 (ELO rankings are not comparable across benchmarks. My rankings are normalized on the `random` AI having an ELO of 0.)
 
-| Rank | Name                          | Elo  |
-|------|-------------------------------|------|
-| 1    | gpt-4o                        | 1377 |
-| 1    | claude-3-5-sonnet             | 1377 |
-| 2    | llama3.1-405B-instruct-turbo  | 1223 |
-| 3    | naive                         | 1143 |
-| 4    | llama3.1-70B-instruct-turbo   | 1132 |
-| 5    | gpt-4o-mini                   | 420  |
-| 6    | bigmoney                      | 340  |
-| 7    | llama3.1-8B-instruct-turbo    | 332  |
-| 8    | random                        | 0    |
+| Name                         | Elo |
+|------------------------------|-----|
+| bigmoney                     | 958 |
+| gpt-4o                       | 958 |
+| claude-3-5-sonnet            | 958 |
+| llama3.1-405B-instruct-turbo | 836 |
+| naive                        | 757 |
+| llama3.1-70B-instruct-turbo  | 745 |
+| gpt-4o-mini                  | 432 |
+| llama3.1-8B-instruct-turbo   | 382 |
+| random                       |   0 |
 
 The rankings show that small models and large models are on a different playing field. `gpt-4o` and `claude-sonnet` are neck and neck. (Many more rounds might reveal that one has an edge over the other but I don't care enough to spend the $$.) The flagship models have a slight edge over a `naive` procedural algorithm. Private models perform slightly better at this task than their open source counterparts.
 
