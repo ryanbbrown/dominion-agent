@@ -4,6 +4,10 @@ I wanted to test if LLMs could be used as casual AIs for card/board games. The g
 
 Card games are an interesting application here IMO because they often have flexible rules based on the description of cards in play. This makes writing a procedural AI extremely difficult. However, LLMs obviously excel at understanding these descriptions. The question remains though if LLMs can form a coherent strategy based on the cards in play.
 
+## Edits: 01/21/2025
+* Added New Sonnet 3.5 & DeepSeek models
+* I've tried playing against some reasoning models (01 / DeepSeek Reasoner R1) but they are just too slow and expensive to be practical. Further more, I haven't found them to make significantly better moves than the non-reasoning models. 
+
 ## Edits: 08/17/2024
 The bigmoney AI was not working. I have fixed that and updated the elo rankings. Proper bigmoney seems to be about 50:50 with 4o and Claude. Bigmoney will typically beat novice players but small improvements to bigmoney are consistently better (such as smithy-bigmoney.) Overall, this correction represents a low bar that the LLMs haven't passed.
 
@@ -100,7 +104,7 @@ The rankings show that small models and large models are on a different playing 
 This is essentially two packages, plus some helper scripts.
 * Run `npm install` in the base directory and `llmai`. 
 * Create a file `llmai/src/config.json` and fill in your `*_API_KEY`s
-* Run `npm build` in the `llmai` directory.
+* Run `npm run build` in the `llmai` directory.
 
 
 [compete.js](compete.js) will continually run matches between AIs<br>
@@ -108,7 +112,7 @@ This is essentially two packages, plus some helper scripts.
 
 ## Command Line Usage
 ```
-Usage: ./lib/main.js [--player <AI_Name>] [--seed <seed>]
+Usage: node ./lib/main.js [--player <AI_Name>] [--seed <seed>]
 AIs available:
   cli
   lmstudioai -- (Play against a model running locally)
@@ -116,12 +120,15 @@ AIs available:
   bigmoney
   random
   claude-3-5-sonnet
+  claude-3-5-sonnet-new
   gpt-4 -- (Pretty expensive to run)
   gpt-4o
   gpt-4o-mini
   llama3.1-405B-instruct-turbo
   llama3.1-70B-instruct-turbo
   llama3.1-8B-instruct-turbo
+  deepseek-chat
+  deepseek-reasoner
   
 Sets available:
   Base Set (second edition)

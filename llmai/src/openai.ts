@@ -1,4 +1,4 @@
-import { makeAI } from "./base";
+import { makeAI, makeAIOptions } from "./base";
 import OpenAI from "openai";
 import { OPENAI_API_KEY } from "./config";
 
@@ -6,9 +6,9 @@ const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
 });
 
-export function openAI(model: string, json = false) {
+export function openAI(model: string, json = false, api = openai, options?: makeAIOptions) {
     return makeAI(async (chatLog) => {
-        const prediction = await openai.chat.completions.create({
+        const prediction = await api.chat.completions.create({
             model,
             max_tokens: 512,
             messages: chatLog,
@@ -31,5 +31,5 @@ export function openAI(model: string, json = false) {
         }
 
         return output;
-    });
+    }, options);
 }

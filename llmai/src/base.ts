@@ -68,7 +68,11 @@ export const RESPONSE_SCHEMA = {
 
 export type ChatLog = { role: 'system' | 'user' | 'assistant', content: string }[];
 
-export function makeAI(send: (chatLog: ChatLog) => Promise<string>) {
+export type makeAIOptions = {
+    reasoning?: boolean;
+}
+
+export function makeAI(send: (chatLog: ChatLog) => Promise<string>, options: makeAIOptions = {reasoning: false}) {
     return async function chooseMove(dominion: any, state: any, moveList: any, callback: any) {
         // There's a small amount of possible information disclosure here,
         // but for the most part the AI should always just play all treasure cards during the buy phase.
@@ -80,13 +84,20 @@ export function makeAI(send: (chatLog: ChatLog) => Promise<string>) {
         const prompt = `${state.printGameState()}\n${state.printMoveList(moveList)}`;
         console.log(prompt);
 
-        const chatRequest: ChatLog = [
+        let chatRequest: ChatLog = [
             { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: getGameRules(state.printSupplyDetails(true)) },
             { role: "user", content: INSTRUCTIONS_PLAY },
             { role: "user", content: `GAME LOG\n${(state.printLog() as string[]).slice(-100).join('\n')}` },
             { role: 'user', content: prompt },
         ];
+
+        if (options.reasoning) {
+            chatRequest = [{
+                role: "user",
+                content: chatRequest.map(_ => _.content).join('\n\n'),
+            }]
+        }
 
         let attempts = RETRY_ATTEMPTS;
         while (--attempts) {

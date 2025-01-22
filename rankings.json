@@ -10,9 +10,24 @@
     "exclude": false
   },
   {
+    "name": "claude-3-5-sonnet-new",
+    "elo": 958,
+    "exclude": false
+  },
+  {
     "name": "claude-3-5-sonnet",
     "elo": 958,
     "exclude": true
+  },
+  {
+    "name": "deepseek-reasoner",
+    "elo": 958,
+    "exclude": false
+  },
+  {
+    "name": "deepseek-chat",
+    "elo": 958,
+    "exclude": false
   },
   {
     "name": "llama3.1-405B-instruct-turbo",
