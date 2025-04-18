@@ -1,1313 +1,1335 @@
 {
-  "cards": {
-    "Copper": {
-      "description": "Costs 0 coins. When played +1 coins",
-      "supply": {
-        "2": 60,
-        "3": 60,
-        "4": 60
-      },
-      "includeCondition": "always",
-      "cost": 0,
-      "type": {
-        "Treasure": true
-      },
-      "treasure": 1
-    },
-    "Silver": {
-      "description": "Costs 3 coins. When played +2 coins",
-      "supply": {
-        "2": 40,
-        "3": 40,
-        "4": 40
-      },
-      "includeCondition": "always",
-      "cost": 3,
-      "type": {
-        "Treasure": true
-      },
-      "treasure": 2
-    },
-    "Gold": {
-      "description": "Costs 6 coins. When played +3 coins",
-      "supply": {
-        "2": 30,
-        "3": 30,
-        "4": 30
-      },
-      "includeCondition": "always",
-      "cost": 6,
-      "type": {
-        "Treasure": true
-      },
-      "treasure": 3
-    },
-    "Platinum": {
-      "description": "",
-      "supply": {
-        "2": 12,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "prosperity",
-      "cost": 9,
-      "type": {
-        "Treasure": true
-      },
-      "treasure": 5
-    },
-    "Curse": {
-      "description": "Costs 0 coins. Worth -1 victory points",
-      "supply": {
-        "2": 10,
-        "3": 20,
-        "4": 30
-      },
-      "includeCondition": ["Witch"],
-      "cost": 0,
-      "type": {
-        "Curse": true
-      },
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": -1
-          }
-        }
-      ]
-    },
-    "Estate": {
-      "description": "Costs 2 coins. Worth 1 victory point",
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "always",
-      "cost": 2,
-      "type": {
-        "Victory": true
-      },
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": 1
-          }
-        }
-      ]
-    },
-    "Duchy": {
-      "description": "Costs 5 coins. Worth 3 victory points",
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "always",
-      "cost": 5,
-      "type": {
-        "Victory": true
-      },
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": 3
-          }
-        }
-      ]
-    },
-    "Province": {
-      "description": "Costs 8 coins. Worth 6 victory points",
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "always",
-      "cost": 8,
-      "type": {
-        "Victory": true
-      },
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": 6
-          }
-        }
-      ]
-    },
-    "Colony": {
-      "description": "Costs 11 coins. Worth 10 victory points",
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "prosperity",
-      "cost": 11,
-      "type": {
-        "Victory": true
-      },
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": 10
-          }
-        }
-      ]
-    },
-    "Harbinger": {
-      "description": "Costs 3 coins. When played +1 Card +1 Action - Look through your discard pile. You may put a card from it onto your deck.",
-      "strategy": "Harbinger is usually a weak card. As a cantrip, it is often innocuous to add to your deck, but its extra effect is rarely impactful.\nIn general, you want to be drawing as much of your deck as possible each turn. In the ideal case, this means shuffling at the end of each turn, resulting in an always-empty discard pile. In games where you can draw your whole deck—which is many of them—Harbinger is nearly useless. But it is often better than nothing, so if you only have $3 and there is not a better card available, you might as well grab a Harbinger.\nOn the other hand, in kingdoms with weak draw and/or thinning where money-based strategies are more viable, you’re a lot more likely to have a discard pile, which means that Harbinger may do something useful for you. Unfortunately, in games like this Harbinger faces competition from Silver at the same price point, and Silver is a good card for money-centric games. It’s also an action card, so if you’re playing with terminal draw you have a chance of drawing it dead.\nThe best case for Harbinger is a junker slog. Junker slogs occur when there are strong junkers (such as Witch or Old Witch) and no easy way to get rid of the junk or otherwise get deck control. In these games, you will have a big deck, won't be seeing much of it in a given turn, and have key cards that you want to play as often as possible—all good signs for Harbinger. It's usually worth picking up a few, because they will help you play the key attacks more than your opponent.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+    "cards": {
+        "Copper": {
+            "description": "Costs 0 coins. When played +1 coins",
+            "supply": {
+                "2": 60,
+                "3": 60,
+                "4": 60
+            },
+            "includeCondition": "always",
+            "cost": 0,
+            "type": {
+                "Treasure": true
+            },
+            "treasure": 1
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Silver": {
+            "description": "Costs 3 coins. When played +2 coins",
+            "supply": {
+                "2": 40,
+                "3": 40,
+                "4": 40
+            },
+            "includeCondition": "always",
+            "cost": 3,
+            "type": {
+                "Treasure": true
+            },
+            "treasure": 2
         },
-        {
-          "name": "putOnDeckFromDiscard"
-        }
-      ]
-    },
-    "Merchant": {
-      "description": "Costs 3 coins. When played +1 Card +1 Action - The first time you play a Silver this turn, +1 coin",
-      "strategy": "Merchant is a Peddler variant, a cantrip which gives an extra $1. In order to get the extra $1, however, it must be combined with a Silver. As a cheap cantrip, Merchant is typically a passable, if sometimes unreliable, source of $.\nIt is common when building an engine to get 1-2 Silvers in the early game in order to increase the likelihood of hitting higher price points. Later, however, buying more Silvers is often a bad idea, because they are stop cards which interfere with your ability to draw your deck. Merchant becomes a card that you can obtain cheaply to increase your economy without harming your deck’s draw capabilities, so you will often choose to buy one on turns when you can only afford something cheap. It is also a common target for gainers like Workshop and a good low-cost card to get with an extra Buy. Once you are drawing a substantial portion of your deck, you will likely find it easy to line up your Merchants with Silver, and Merchants become a reliable source of $.\nMerchant is generally much less useful in a money strategy due to a lack of deck control, but can be a reasonable purchase in those focused on flooding the deck with Silver, where the chance of colliding the two cards becomes sufficiently high.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Gold": {
+            "description": "Costs 6 coins. When played +3 coins",
+            "supply": {
+                "2": 30,
+                "3": 30,
+                "4": 30
+            },
+            "includeCondition": "always",
+            "cost": 6,
+            "type": {
+                "Treasure": true
+            },
+            "treasure": 3
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Platinum": {
+            "description": "",
+            "supply": {
+                "2": 12,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "prosperity",
+            "cost": 9,
+            "type": {
+                "Treasure": true
+            },
+            "treasure": 5
         },
-        {
-          "name": "extraCoinFromFirstSilver"
-        }
-      ]
-    },
-    "Vassal": {
-      "description": "Costs 3 coins. When played +2 coins - Discard the top card of your deck. If it is an Action card, you may play it.",
-      "strategy": "There are two cases where Vassal is a useful card. The first is when trashing is very strong so you can play an engine that is entirely or almost entirely composed of Action cards. The second is when you intend to get several cards that manipulate or inspect the top card of the deck, such as Sentry, so that you may be able to set up an Action card for Vassal to hit. In either of these cases, it is common to avoid purchasing Silver and instead purchase a Vassal or two at the start of the game to increase the $ output of your deck. Early in the game, these Vassals will inevitably fail to find Action cards but will help to cycle past low-value cards like Copper and Estate. Later, they can often hit cantrips, providing the $ benefit of Silver without being a stop card. This only works if you play your Vassals early enough in your turn, before drawing your deck. If villages are difficult to obtain, you should be careful not to gain too many Vassals, as playing them will risk ending your turn prematurely when they hit non-Action cards or terminal Actions. However, in a very thin deck, Vassals playing Vassals can be an effective way to generate $. At the end of the game, it often becomes difficult to make Vassals hit Action cards because your deck fills up with Victory cards, so Vassal rewards greening over a small number of turns.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 2
-          }
+        "Curse": {
+            "description": "Costs 0 coins. Worth -1 victory points",
+            "supply": {
+                "2": 10,
+                "3": 20,
+                "4": 30
+            },
+            "includeCondition": ["Witch"],
+            "cost": 0,
+            "type": {
+                "Curse": true
+            },
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": -1
+                    }
+                }
+            ]
         },
-        {
-          "name": "maybeTopDeckAnAction"
-        }
-      ]
-    },
-    "Poacher": {
-      "strategy": "Poacher is a useful card to increase your $ output early in the game. Its price of $4 makes it more affordable than similar cards like Market, and its drawback usually doesn’t manifest until much later in the game. As a Peddler variant, Poacher should be viewed as a way to add payload to your deck without increasing how much draw you need. However, unlike most cantrips, you shouldn’t get too many of them, or else you’ll have to start discarding a lot of cards as soon as one pile is emptied. If this is likely to happen early in the game (e.g., because Witch will be handing out the Curses quickly), Poacher may look less attractive than usual from the beginning.\nOpening with Poacher is generally good if buying a $5 card such as Sentry is a priority. The most straightforward comparison for Poacher is to Silver. With a Poacher/Silver opening, you are about as likely to generate $5 on turn 3 or turn 4 as with a Silver/Silver, at around 91%. The advantage of Poacher is that it’s not another stop card in your deck like a second Silver would be, and so getting deck control should be slightly easier. You generally shouldn’t take Poacher over a trasher (such as Moneylender), but it can be especially useful if you open with it alongside a cheaper trasher such as Chapel.",
-      "description": "Costs 4 coins. When played +1 Card +1 Action +1 Coins - Discard a card per empty Supply pile.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Estate": {
+            "description": "Costs 2 coins. Worth 1 victory point",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "always",
+            "cost": 2,
+            "type": {
+                "Victory": true
+            },
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": 1
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Duchy": {
+            "description": "Costs 5 coins. Worth 3 victory points",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "always",
+            "cost": 5,
+            "type": {
+                "Victory": true
+            },
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": 3
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 1
-          }
+        "Province": {
+            "description": "Costs 8 coins. Worth 6 victory points",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "always",
+            "cost": 8,
+            "type": {
+                "Victory": true
+            },
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": 6
+                    }
+                }
+            ]
         },
-        {
-          "name": "discardPerEmptySupply"
-        }
-      ]
-    },
-    "Bandit": {
-      "description": "Costs 5 coins. When played Gain a Gold. Each other player reveals the top 2 cards of their deck, trashes a revealed Treasure other than Copper, and discards the rest.",
-      "strategy": "Bandit’s primary role is to add Gold to your engine after you are successfully drawing your deck. Typically, when building an engine, you will spend your initial turns trashing your starting cards and buying draw cards. This often leads to a deck that draws itself reliably but doesn’t achieve much once drawn. Buying a Bandit at this point will jumpstart the process of adding payload to your deck, as the Bandit will add a Gold every turn thereafter, assuming you successfully draw your deck. If you have overdraw, you can even gain the Gold and play it on that same turn.\nIn order for Bandit to provide an ongoing benefit in this context, you need two things:\n1) a way to keep adding additional draw cards to your deck so that you can still draw it after adding Golds (which are stop cards)\n2) a reason why adding many Golds will be worthwhile, typically either +Buy or trash-for-benefit cards like Remodel\nIndeed, the combination of Bandit and Remodel is one of the stronger forms of payload in the Base Dominion set, as it allows you to gain an extra Province each turn.\nBandit’s attack is rarely an important part of the card, but it can be helpful if its odds of hitting a Treasure are high enough. Typically this means it’s useful in kingdoms with strong trashing and where Treasure is a major source of payload (as opposed to Action cards like Festival). In games with more than two players, Bandit can trash more Treasures than it gains. If multiple opponents are playing Bandits, using Treasure payload becomes less attractive.\nDespite the fact that gaining Golds is a valuable thing to do in money strategies, Bandit is only occasionally the best terminal Action to use in a money-oriented deck. This is because Bandit makes no $ and draws no cards, so it worsens your current turn in exchange for a benefit that won’t be experienced until the next time you shuffle your deck. Cards with more immediate benefits should often be preferred.\nTherefore try to spice up Bandit, e.g. with Vanilla bonus Adventures tokens from Teacher, Lost Arts, Training, Pathfinding. Or try investing in possibilities playing Bandit during your turn without having extra actions, e.g. by Village Green.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true,
-        "Attack": true
-      },
-      "effects": [
-        {
-          "name": "gainCard",
-          "params": {
-            "name": "Gold",
-            "onTopOfDeck": false
-          }
+        "Colony": {
+            "description": "Costs 11 coins. Worth 10 victory points",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "prosperity",
+            "cost": 11,
+            "type": {
+                "Victory": true
+            },
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": 10
+                    }
+                }
+            ]
         },
-        {
-          "name": "attackRevealAndTrashTreasure"
-        }
-      ]
-    },
-    "Sentry": {
-      "description": "Costs 5 coins. When played +1 Card +1 Action - Look at the top 2 cards of your deck. Trash and/or discard any number of them. Put the rest back on top in any order.",
-      "strategy": "Sentry is a remarkably powerful trasher and sifter. Sentry will be your first buy with $5 on most Kingdoms.\nGetting Sentry on one of your first two turns can be game changing. It is a trasher that does not decrease hand size. After playing Remodel, you are left with 2 fewer cards in hand than you started with. After playing Chapel for the first time, you usually don’t have any cards left at all. Sentry lets you trash without losing momentum, and you can still buy a reasonable card after trashing your junk.\nThis card can depend a lot on luck, especially if you open $3/$4. Seeing your Sentry after your second shuffle makes it much more likely that it hits your good cards. Despite these decreased odds, buying a Sentry on turns 3 or 4 is usually the correct move. One weakness of Sentry is that it cannot trash cards you have in your hand. Convenient ways to discard cards (e.g. Forum, Storeroom, Oasis) can help you trash your remaining Coppers and Estates, as long as you draw back around to what you discarded. This is only reliable if you are close to drawing your deck. Usually, Sentry’s ability to trash correlates to how conveniently your cards are arranged in your shuffle.\nTrashing lets you see your good cards more often. In addition to trashing, Sentry lets you do this in the late game, by discarding your Victory cards or Treasures to keep your deck rolling.\nSentry can be a great addition to a money deck as well. Trashing is usually associated with an engine, since it usually slows down your first few turns, but Sentry lets you remove your Coppers and Estates with barely a loss of pace.\nIn Base-only games, Sentry has a notable synergy with Vassal. In this case, you are happy to look at Action cards with Sentry, since you can line them up for your Vassals. This is a strong and reliable strategy, and can handle green cards unusually well, since your Sentries can bypass them. When playing this deck, you want to play with as few Treasures as possible, and get your $ from Vassal and other Action cards. Actions with +Buy, like Market and Festival, are especially valuable.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Harbinger": {
+            "description": "Costs 3 coins. When played +1 Card +1 Action - Look through your discard pile. You may put a card from it onto your deck.",
+            "strategy": "Harbinger is usually a weak card. As a cantrip, it is often innocuous to add to your deck, but its extra effect is rarely impactful.\nIn general, you want to be drawing as much of your deck as possible each turn. In the ideal case, this means shuffling at the end of each turn, resulting in an always-empty discard pile. In games where you can draw your whole deck—which is many of them—Harbinger is nearly useless. But it is often better than nothing, so if you only have $3 and there is not a better card available, you might as well grab a Harbinger.\nOn the other hand, in kingdoms with weak draw and/or thinning where money-based strategies are more viable, you’re a lot more likely to have a discard pile, which means that Harbinger may do something useful for you. Unfortunately, in games like this Harbinger faces competition from Silver at the same price point, and Silver is a good card for money-centric games. It’s also an action card, so if you’re playing with terminal draw you have a chance of drawing it dead.\nThe best case for Harbinger is a junker slog. Junker slogs occur when there are strong junkers (such as Witch or Old Witch) and no easy way to get rid of the junk or otherwise get deck control. In these games, you will have a big deck, won't be seeing much of it in a given turn, and have key cards that you want to play as often as possible—all good signs for Harbinger. It's usually worth picking up a few, because they will help you play the key attacks more than your opponent.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 3,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "putOnDeckFromDiscard"
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Merchant": {
+            "description": "Costs 3 coins. When played +1 Card +1 Action - The first time you play a Silver this turn, +1 coin",
+            "strategy": "Merchant is a Peddler variant, a cantrip which gives an extra $1. In order to get the extra $1, however, it must be combined with a Silver. As a cheap cantrip, Merchant is typically a passable, if sometimes unreliable, source of $.\nIt is common when building an engine to get 1-2 Silvers in the early game in order to increase the likelihood of hitting higher price points. Later, however, buying more Silvers is often a bad idea, because they are stop cards which interfere with your ability to draw your deck. Merchant becomes a card that you can obtain cheaply to increase your economy without harming your deck’s draw capabilities, so you will often choose to buy one on turns when you can only afford something cheap. It is also a common target for gainers like Workshop and a good low-cost card to get with an extra Buy. Once you are drawing a substantial portion of your deck, you will likely find it easy to line up your Merchants with Silver, and Merchants become a reliable source of $.\nMerchant is generally much less useful in a money strategy due to a lack of deck control, but can be a reasonable purchase in those focused on flooding the deck with Silver, where the chance of colliding the two cards becomes sufficiently high.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 3,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "extraCoinFromFirstSilver"
+                }
+            ]
         },
-        {
-          "name": "revealAndTrash"
-        }
-      ]
-    },
-    "Artisan": {
-      "description": "Costs 6 coins. When played Gain a card to your hand costing up to 5 coins. Put a card from your hand onto your deck.",
-      "strategy": "Artisan is a strong but expensive gainer that lets you gain $5 cards, which are often rather powerful, to your hand. While the topdecking requirement is typically a drawback because it decreases your hand size and slows down drawing your deck, it can sometimes be used to your advantage.\nArtisan has a rather high cost, being priced at $6. Because of the strength of its effect in many games, it can be worth thinking about whether there's a way to buy an early Artisan.\nArtisan shines in Kingdoms with strong villages and draw. If you have plenty of draw, the downside of putting a card back on your deck doesn't hurt as much as usual, and multiple villages can allow you to play multiple Artisans per turn. Even without strong draw, villages can still make Artisan worth playing: decreasing your hand size by one is often worth gaining a $5 and possibly playing it right away.\nIf the gain-and-play strategy isn’t possible, it can still be worth using Artisan as the last Action card of your turn and putting something onto your deck to set up your next turn (which might be what you just gained). Even though this usually isn't as powerful as gain-and-play, it's still a great way to add strong cards to your deck quickly.\nSince Artisan can gain any $5 card in the Supply, it can sometimes be worth gaining Duchies or other Victory cards with it. Although this usually isn't the primary reason that you'll want to gain Artisan, it can often be a prudent move toward the end of the game and may be crucial if there isn’t a source of +Buy in the Kingdom enabling you to purchase multiple Victory cards in one turn.\nArtisan's topdecking ability synergizes with cards and effects that care about that top card, such as Vassal.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 6,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "gainCard",
-          "params": {
-            "costingUpTo": 5,
-            "intoHand": true
-          }
+        "Vassal": {
+            "description": "Costs 3 coins. When played +2 coins - Discard the top card of your deck. If it is an Action card, you may play it.",
+            "strategy": "There are two cases where Vassal is a useful card. The first is when trashing is very strong so you can play an engine that is entirely or almost entirely composed of Action cards. The second is when you intend to get several cards that manipulate or inspect the top card of the deck, such as Sentry, so that you may be able to set up an Action card for Vassal to hit. In either of these cases, it is common to avoid purchasing Silver and instead purchase a Vassal or two at the start of the game to increase the $ output of your deck. Early in the game, these Vassals will inevitably fail to find Action cards but will help to cycle past low-value cards like Copper and Estate. Later, they can often hit cantrips, providing the $ benefit of Silver without being a stop card. This only works if you play your Vassals early enough in your turn, before drawing your deck. If villages are difficult to obtain, you should be careful not to gain too many Vassals, as playing them will risk ending your turn prematurely when they hit non-Action cards or terminal Actions. However, in a very thin deck, Vassals playing Vassals can be an effective way to generate $. At the end of the game, it often becomes difficult to make Vassals hit Action cards because your deck fills up with Victory cards, so Vassal rewards greening over a small number of turns.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 3,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "maybeTopDeckAnAction"
+                }
+            ]
         },
-        {
-          "name": "putCardsOnDeck",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Cellar": {
-      "description": "Costs 2 coins. When played +1 Action - Discard any number of cards, then draw that many.",
-      "strategy": "Cellar is a weak sifting card. Cellar’s main drawbacks are that you discard before drawing, and that it decreases your handsize by one. Cellar’s main advantages are that the opportunity cost to gain one is usually low, and it can cycle an unlimited number of cards. Cellar is therefore best played from a large starting handsize, when you can discard more stop cards at once.\nSince Cellar lets you choose how many cards to sift, it can give you some flexibility with regard to timing your reshuffles. In some cases, it may be advisable to not discard all the junk cards you have in hand, if discarding fewer would let you avoid triggering a reshuffle of a deck with mostly junk cards in it.\nCellar works best in Kingdoms with limited or no trashing but strong draw, where its cycling can be most useful. It can help you find good cards in a sloggy deck (such as when facing a Witch), and can make some engines more reliable. But in a slim, Treasure-less engine in a trashing-heavy game, Cellar is usually unnecessary.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 2,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Poacher": {
+            "strategy": "Poacher is a useful card to increase your $ output early in the game. Its price of $4 makes it more affordable than similar cards like Market, and its drawback usually doesn’t manifest until much later in the game. As a Peddler variant, Poacher should be viewed as a way to add payload to your deck without increasing how much draw you need. However, unlike most cantrips, you shouldn’t get too many of them, or else you’ll have to start discarding a lot of cards as soon as one pile is emptied. If this is likely to happen early in the game (e.g., because Witch will be handing out the Curses quickly), Poacher may look less attractive than usual from the beginning.\nOpening with Poacher is generally good if buying a $5 card such as Sentry is a priority. The most straightforward comparison for Poacher is to Silver. With a Poacher/Silver opening, you are about as likely to generate $5 on turn 3 or turn 4 as with a Silver/Silver, at around 91%. The advantage of Poacher is that it’s not another stop card in your deck like a second Silver would be, and so getting deck control should be slightly easier. You generally shouldn’t take Poacher over a trasher (such as Moneylender), but it can be especially useful if you open with it alongside a cheaper trasher such as Chapel.",
+            "description": "Costs 4 coins. When played +1 Card +1 Action +1 Coins - Discard a card per empty Supply pile.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "discardPerEmptySupply"
+                }
+            ]
         },
-        {
-          "name": "discardThenDraw"
-        }
-      ]
-    },
-    "Chapel": {
-      "description": "Costs 2 coins. When played trash up to 4 cards from your hand.",
-      "strategy": "Chapel is widely considered to be one of the strongest cards in the game. It is one of the fastest trashers, allowing a player to quickly trash away their starting cards (and any other junk cards), and should usually be gained on turn 1 or 2.\nTrashing cards is usually very powerful. The Coppers and Estates you start with are very weak, and get in the way of drawing much more powerful cards that you will be gaining during the course of the game. By removing these weak cards as soon as possible:\nYou start drawing hands with a higher proportion of powerful cards, enabling much stronger turns.\nYou are more likely to pair up cards that want to be drawn together, such as Village and Smithy.\nBy having a small deck of few cards, you do not need to purchase as many draw cards, which makes drawing and playing all your cards each turn much easier.\nYou can focus on playing the powerful cards you really want to be using, such as Witch and Artisan more often.\nPlayers should trash as many Coppers and Estates as they can the first time they draw Chapel to reduce the size of their deck as quickly as possible. Take care on subsequent plays; Copper is weak, but you can be reliant on them for money early in the game.\nIt is especially important to trash early when junking attacks like Witch are present. Trashing quickly prepares your deck for the incoming Curses, as a small deck can more easily draw Chapel and Curse in the same hand. Additionally, when your deck is small you can play your own Witches more often, hopefully giving most of the Curses to your opponent first.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 2,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "trashCards",
-          "params": {
-            "amount": 4,
-            "mandatory": false
-          }
-        }
-      ]
-    },
-    "Moat": {
-      "description": "Costs 2 coins. When played +2 Cards - When another player plays an Attack card, you may first reveal this from your hand, to be unaffected by it.",
-      "strategy": "Moat provides terminal draw of +2 Cards, which is significantly worse than the +3 Cards present on cards such as Smithy. Each Village and Moat pair increases your hand size by one, rather than two with Village and Smithy, meaning you need twice as many pairs for an equivalent benefit. When used in conjunction with villages that do not draw, such as Festival, Moat does not increase your hand size and the combination is highly unreliable, being very vulnerable to an unfavorable order of drawing. Moat requires a very well trashed deck and plentiful access to many drawing villages to work well as your primary draw card. In these conditions, you can also use it as a supplement to better draw cards when those are present, as its low price can present you many opportunities to gain them.\nAgainst attacks during your opponents' turns, Moat provides attack immunity only if you draw it in your starting 5 cards. As your deck increases in size, a single Moat becomes less and less consistent in its ability to defend. It is significantly weaker for this purpose than the other attack immunity cards. Some cards can help guarantee Moat appears in your starting hand every turn, giving full defense coverage with only one copy of Moat. For example, Artisan allows you to put it back on top of your deck.\nAgainst many attacks, it can be better to simply accept that you’ll be getting attacked than to add Moats to your deck for the chance they might occasionally block an attack. In the case of junking attacks such as Witch, it is often more effective to focus on giving all the Curses to your opponent first, instead of spending time obtaining Moats solely for defense.\nUnique to Moat is that each time you are attacked you have the option to receive the attack by not revealing your Moat, as occasionally an attack can be beneficial to you.\nMoat's defensive capabilities improve in games with more players, as you tend to be attacked more often. Junking attacks in 4 player games can add junk to your deck very quickly and you can easily receive many copies of junk between turns, making Moat more valuable when it does appear in your starting hand.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 2,
-      "type": {
-        "Action": true,
-        "Reaction": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 2
-          }
-        }
-      ],
-      "condition": {
-        "name": "onAttack",
-        "effects": [
-          {
-            "name": "revealThisCard"
-          },
-          {
-            "name": "unaffectedByAttack"
-          }
-        ]
-      }
-    },
-    "Village": {
-      "description": "Costs 3 coins. When played +1 Card +2 Actions",
-      "strategy": "Village is an important card for engines, as it is one of the simplest and cheapest ways to enable a) playing terminal draw cards like Smithy while retaining the ability to play any Action cards they draw, and b) playing multiple terminal cards per turn, allowing you to use more than one terminal payload card.\nYou should only add Villages to your deck when you need to increase your terminal space, or the maximum number of terminals you can play in one turn. Your terminal space is directly related to the number of Villages or Village-like cards you play, and importantly has no benefit in and of itself; you need to take advantage of increased terminal space by playing more terminals. It follows that you need to line up your Villages and terminals in the same hand for this to occur. This is more likely when you have good deck control via thinning and/or draw, and/or multiple Villages and terminals.\nAs the only net benefit of playing a Village is increased terminal space, it is almost always a mistake to gain a Village during the opening turns; better to wait until you have at least a couple of terminals in your deck. Later in the game, as you build, you should aim to add Villages to increase your terminal space so that it matches your expected terminals per turn. If you’re drawing your deck, this usually means adding one Village for every terminal. If you’re not, you can sometimes get away with being overterminaled, or having more terminals than your villages can support, as you might not draw all your terminals.\nVillage should typically be avoided in money strategies, in which you don’t plan to obtain enough deck control to reliably line it up with your terminal Actions.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Bandit": {
+            "description": "Costs 5 coins. When played Gain a Gold. Each other player reveals the top 2 cards of their deck, trashes a revealed Treasure other than Copper, and discards the rest.",
+            "strategy": "Bandit’s primary role is to add Gold to your engine after you are successfully drawing your deck. Typically, when building an engine, you will spend your initial turns trashing your starting cards and buying draw cards. This often leads to a deck that draws itself reliably but doesn’t achieve much once drawn. Buying a Bandit at this point will jumpstart the process of adding payload to your deck, as the Bandit will add a Gold every turn thereafter, assuming you successfully draw your deck. If you have overdraw, you can even gain the Gold and play it on that same turn.\nIn order for Bandit to provide an ongoing benefit in this context, you need two things:\n1) a way to keep adding additional draw cards to your deck so that you can still draw it after adding Golds (which are stop cards)\n2) a reason why adding many Golds will be worthwhile, typically either +Buy or trash-for-benefit cards like Remodel\nIndeed, the combination of Bandit and Remodel is one of the stronger forms of payload in the Base Dominion set, as it allows you to gain an extra Province each turn.\nBandit’s attack is rarely an important part of the card, but it can be helpful if its odds of hitting a Treasure are high enough. Typically this means it’s useful in kingdoms with strong trashing and where Treasure is a major source of payload (as opposed to Action cards like Festival). In games with more than two players, Bandit can trash more Treasures than it gains. If multiple opponents are playing Bandits, using Treasure payload becomes less attractive.\nDespite the fact that gaining Golds is a valuable thing to do in money strategies, Bandit is only occasionally the best terminal Action to use in a money-oriented deck. This is because Bandit makes no $ and draws no cards, so it worsens your current turn in exchange for a benefit that won’t be experienced until the next time you shuffle your deck. Cards with more immediate benefits should often be preferred.\nTherefore try to spice up Bandit, e.g. with Vanilla bonus Adventures tokens from Teacher, Lost Arts, Training, Pathfinding. Or try investing in possibilities playing Bandit during your turn without having extra actions, e.g. by Village Green.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true,
+                "Attack": true
+            },
+            "effects": [
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "name": "Gold",
+                        "onTopOfDeck": false
+                    }
+                },
+                {
+                    "name": "attackRevealAndTrashTreasure"
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 2
-          }
-        }
-      ]
-    },
-    "Workshop": {
-      "description": "Costs 3 coins. When played Gain a card costing up to 4 coins.",
-      "strategy": "Workshop is at its best when there are strong $3 and $4 cards that you want a lot of. Typically these cards are cantrips (e.g. Merchant) or villages (e.g. Village or Throne Room). However, even when it's good, Workshop is still often a poor choice in the opening, because it is a terminal stop card that provides no $. This is a major drawback given that affording $5 cards such as Sentry in the opening is a common goal.\nIn the absence of strong targets for Workshop, it’s usually not worth going for. Using Workshop to gain Silvers is slow to benefit you, and you’re probably better off just buying the Silver to begin with and using it to buy better cards.\nWorkshop is weak compared to other up-to-$4 gainers. Ironworks, Inventor, and Groom are all examples of Workshop variants that have Workshop’s effect plus an extra bonus for $4, and the bonuses these cards provide give these other variants more use cases than Workshop. However, Workshop can be valuable when it is the only way to gain multiple cards per turn, allowing you to gain engine pieces faster than an opponent with no Workshops and only a single Buy per turn. In such single-Buy Kingdoms, the ability to build faster and gain an Estate or two near the end of the game can be decisive.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 3,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "gainCard",
-          "params": {
-            "costingUpTo": 4
-          }
-        }
-      ]
-    },
-    "Bureaucrat": {
-      "description": "Costs 4 coins. When played Gain a Silver onto your deck. Each other player reveals a Victory card from their hand and puts it onto their deck (or reveals a hand with no Victory cards).",
-      "strategy": "Bureaucrat is an extremely weak card. It does two things: it attacks your opponent and it gains a Silver to the top of your deck. The Attack is weak and is often only a minor annoyance. It does nothing for most of the game if your opponent is able to trash their Estates. Furthermore, although gaining Silvers can be helpful, it is usually best not to have them on top of your deck. You would rather have drawing cards, such as Laboratory, on the top of your deck and payload cards, such as Silver, at the bottom where you can draw them later in your turn. Playing a Bureaucrat also often hurts your current turn by taking up space in your hand and using an Action but not providing any benefit until the next turn, when you draw the Silver. Since good turns now lead to better turns later, cards that do not improve your current turn can be difficult to justify.\nBureaucrat is a card that is only worth getting in a few scenarios. The main use is when you can draw your deck, play the Bureaucrat, and then play another card to draw the Silver that turn. In that instance, Bureaucrat can be a relatively efficient way to increase your deck’s $. Alternatively, on a very weak board, gaining many Silvers can be worth it, and the top-decking can actually be helpful. Furthermore, your opponent is likely to be unable to trash their Estates and will be adding Victory cards to their deck gradually, so the attack will have more opportunities to succeed. In very rare cases, Bureaucrat can also disrupt decks that rely on very precise shuffle management (e.g., some Golden deck variants), although other Attack cards will usually be more effective. Even in these contexts, there is almost always some better card than Bureaucrat to be playing.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true,
-        "Attack": true
-      },
-      "effects": [
-        {
-          "name": "gainCard",
-          "params": {
-            "name": "Silver",
-            "onTopOfDeck": true
-          }
+        "Sentry": {
+            "description": "Costs 5 coins. When played +1 Card +1 Action - Look at the top 2 cards of your deck. Trash and/or discard any number of them. Put the rest back on top in any order.",
+            "strategy": "Sentry is a remarkably powerful trasher and sifter. Sentry will be your first buy with $5 on most Kingdoms.\nGetting Sentry on one of your first two turns can be game changing. It is a trasher that does not decrease hand size. After playing Remodel, you are left with 2 fewer cards in hand than you started with. After playing Chapel for the first time, you usually don’t have any cards left at all. Sentry lets you trash without losing momentum, and you can still buy a reasonable card after trashing your junk.\nThis card can depend a lot on luck, especially if you open $3/$4. Seeing your Sentry after your second shuffle makes it much more likely that it hits your good cards. Despite these decreased odds, buying a Sentry on turns 3 or 4 is usually the correct move. One weakness of Sentry is that it cannot trash cards you have in your hand. Convenient ways to discard cards (e.g. Forum, Storeroom, Oasis) can help you trash your remaining Coppers and Estates, as long as you draw back around to what you discarded. This is only reliable if you are close to drawing your deck. Usually, Sentry’s ability to trash correlates to how conveniently your cards are arranged in your shuffle.\nTrashing lets you see your good cards more often. In addition to trashing, Sentry lets you do this in the late game, by discarding your Victory cards or Treasures to keep your deck rolling.\nSentry can be a great addition to a money deck as well. Trashing is usually associated with an engine, since it usually slows down your first few turns, but Sentry lets you remove your Coppers and Estates with barely a loss of pace.\nIn Base-only games, Sentry has a notable synergy with Vassal. In this case, you are happy to look at Action cards with Sentry, since you can line them up for your Vassals. This is a strong and reliable strategy, and can handle green cards unusually well, since your Sentries can bypass them. When playing this deck, you want to play with as few Treasures as possible, and get your $ from Vassal and other Action cards. Actions with +Buy, like Market and Festival, are especially valuable.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "revealAndTrash"
+                }
+            ]
         },
-        {
-          "name": "attackPutCardsOnDeck",
-          "params": {
-            "type": "Victory",
-            "amount": 1,
-            "else": {
-              "name": "revealHand"
+        "Artisan": {
+            "description": "Costs 6 coins. When played Gain a card to your hand costing up to 5 coins. Put a card from your hand onto your deck.",
+            "strategy": "Artisan is a strong but expensive gainer that lets you gain $5 cards, which are often rather powerful, to your hand. While the topdecking requirement is typically a drawback because it decreases your hand size and slows down drawing your deck, it can sometimes be used to your advantage.\nArtisan has a rather high cost, being priced at $6. Because of the strength of its effect in many games, it can be worth thinking about whether there's a way to buy an early Artisan.\nArtisan shines in Kingdoms with strong villages and draw. If you have plenty of draw, the downside of putting a card back on your deck doesn't hurt as much as usual, and multiple villages can allow you to play multiple Artisans per turn. Even without strong draw, villages can still make Artisan worth playing: decreasing your hand size by one is often worth gaining a $5 and possibly playing it right away.\nIf the gain-and-play strategy isn’t possible, it can still be worth using Artisan as the last Action card of your turn and putting something onto your deck to set up your next turn (which might be what you just gained). Even though this usually isn't as powerful as gain-and-play, it's still a great way to add strong cards to your deck quickly.\nSince Artisan can gain any $5 card in the Supply, it can sometimes be worth gaining Duchies or other Victory cards with it. Although this usually isn't the primary reason that you'll want to gain Artisan, it can often be a prudent move toward the end of the game and may be crucial if there isn’t a source of +Buy in the Kingdom enabling you to purchase multiple Victory cards in one turn.\nArtisan's topdecking ability synergizes with cards and effects that care about that top card, such as Vassal.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 6,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "costingUpTo": 5,
+                        "intoHand": true
+                    }
+                },
+                {
+                    "name": "putCardsOnDeck",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
+        },
+        "Cellar": {
+            "description": "Costs 2 coins. When played +1 Action - Discard any number of cards, then draw that many.",
+            "strategy": "Cellar is a weak sifting card. Cellar’s main drawbacks are that you discard before drawing, and that it decreases your handsize by one. Cellar’s main advantages are that the opportunity cost to gain one is usually low, and it can cycle an unlimited number of cards. Cellar is therefore best played from a large starting handsize, when you can discard more stop cards at once.\nSince Cellar lets you choose how many cards to sift, it can give you some flexibility with regard to timing your reshuffles. In some cases, it may be advisable to not discard all the junk cards you have in hand, if discarding fewer would let you avoid triggering a reshuffle of a deck with mostly junk cards in it.\nCellar works best in Kingdoms with limited or no trashing but strong draw, where its cycling can be most useful. It can help you find good cards in a sloggy deck (such as when facing a Witch), and can make some engines more reliable. But in a slim, Treasure-less engine in a trashing-heavy game, Cellar is usually unnecessary.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 2,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "discardThenDraw"
+                }
+            ]
+        },
+        "Chapel": {
+            "description": "Costs 2 coins. When played trash up to 4 cards from your hand.",
+            "strategy": "Chapel is widely considered to be one of the strongest cards in the game. It is one of the fastest trashers, allowing a player to quickly trash away their starting cards (and any other junk cards), and should usually be gained on turn 1 or 2.\nTrashing cards is usually very powerful. The Coppers and Estates you start with are very weak, and get in the way of drawing much more powerful cards that you will be gaining during the course of the game. By removing these weak cards as soon as possible:\nYou start drawing hands with a higher proportion of powerful cards, enabling much stronger turns.\nYou are more likely to pair up cards that want to be drawn together, such as Village and Smithy.\nBy having a small deck of few cards, you do not need to purchase as many draw cards, which makes drawing and playing all your cards each turn much easier.\nYou can focus on playing the powerful cards you really want to be using, such as Witch and Artisan more often.\nPlayers should trash as many Coppers and Estates as they can the first time they draw Chapel to reduce the size of their deck as quickly as possible. Take care on subsequent plays; Copper is weak, but you can be reliant on them for money early in the game.\nIt is especially important to trash early when junking attacks like Witch are present. Trashing quickly prepares your deck for the incoming Curses, as a small deck can more easily draw Chapel and Curse in the same hand. Additionally, when your deck is small you can play your own Witches more often, hopefully giving most of the Curses to your opponent first.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 2,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "trashCards",
+                    "params": {
+                        "amount": 4,
+                        "mandatory": false
+                    }
+                }
+            ]
+        },
+        "Moat": {
+            "description": "Costs 2 coins. When played +2 Cards - When another player plays an Attack card, you may first reveal this from your hand, to be unaffected by it.",
+            "strategy": "Moat provides terminal draw of +2 Cards, which is significantly worse than the +3 Cards present on cards such as Smithy. Each Village and Moat pair increases your hand size by one, rather than two with Village and Smithy, meaning you need twice as many pairs for an equivalent benefit. When used in conjunction with villages that do not draw, such as Festival, Moat does not increase your hand size and the combination is highly unreliable, being very vulnerable to an unfavorable order of drawing. Moat requires a very well trashed deck and plentiful access to many drawing villages to work well as your primary draw card. In these conditions, you can also use it as a supplement to better draw cards when those are present, as its low price can present you many opportunities to gain them.\nAgainst attacks during your opponents' turns, Moat provides attack immunity only if you draw it in your starting 5 cards. As your deck increases in size, a single Moat becomes less and less consistent in its ability to defend. It is significantly weaker for this purpose than the other attack immunity cards. Some cards can help guarantee Moat appears in your starting hand every turn, giving full defense coverage with only one copy of Moat. For example, Artisan allows you to put it back on top of your deck.\nAgainst many attacks, it can be better to simply accept that you’ll be getting attacked than to add Moats to your deck for the chance they might occasionally block an attack. In the case of junking attacks such as Witch, it is often more effective to focus on giving all the Curses to your opponent first, instead of spending time obtaining Moats solely for defense.\nUnique to Moat is that each time you are attacked you have the option to receive the attack by not revealing your Moat, as occasionally an attack can be beneficial to you.\nMoat's defensive capabilities improve in games with more players, as you tend to be attacked more often. Junking attacks in 4 player games can add junk to your deck very quickly and you can easily receive many copies of junk between turns, making Moat more valuable when it does appear in your starting hand.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 2,
+            "type": {
+                "Action": true,
+                "Reaction": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 2
+                    }
+                }
+            ],
+            "condition": {
+                "name": "onAttack",
+                "effects": [
+                    {
+                        "name": "revealThisCard"
+                    },
+                    {
+                        "name": "unaffectedByAttack"
+                    }
+                ]
             }
-          }
-        }
-      ]
-    },
-    "Gardens": {
-      "description": "Cost 4 coins. Worth 1 victory point per 10 cards you have (round down).",
-      "strategy": "Gardens is the first example of alt-VP that most Dominion players will experience. Alt-VP generally provides an advantage to engine strategies versus more Treasure-oriented strategies through an indirect mechanism: While the simpler, Treasure-oriented strategy can often get an early lead on Provinces, the engine strategy often tries to compensate by getting additional non-Province sources of VP such as Duchies after building their deck to a state where they are gaining more than one card per turn. This is because buying Provinces may risk causing the game to end before the engine player has regained a points lead, so the engine player needs to diversify their sources of VP. In this context, Gardens provides another source of VP, which is particularly valuable in engine decks with gainers like Workshop which both lead to large decks and allow for the easy acquisition of Gardens.\nThat being said, the advantage to engine strategies that Gardens provides is typically not very large. Gardens is often just a Duchy that costs $4. In some engines with heavy trashing, Gardens can result in even fewer VP than Duchy. Thus, Gardens is primarily valuable in engines that feature very large numbers of gains or where Gardens costing $4 allows it to be gained significantly more easily than Duchy.\nOccasionally, Gardens is a centralizing card that enables a non-engine strategy called a rush. In the Base set, this is typified by the Workshop-Gardens rush. To play this strategy, you try to first gain all the Workshops, then gain all the Gardens, and finally end the game with a VP lead by emptying a third pile (often Estate). This strategy is very rarely the strongest available strategy because Workshop is a weak gainer. Many Workshop variants perform similarly, but there are a few like Groom which can make this strategy very powerful.\nEven more rarely, Gardens can be centralizing for strategies that aren’t rushes, most notably Beggar-Gardens, where players try to make Gardens worth more VP than Province.",
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Victory": true
-      },
-      "victory": [
-        {
-          "type": "perCardInDeck",
-          "params": {
-            "divisor": 10,
-            "multiplier": 1
-          }
-        }
-      ]
-    },
-    "Militia": {
-      "description": "Costs 4 coins. When played +2 Coins - Each other player discards down to 3 cards in hand.",
-      "strategy": "Militia is a terminal silver and a discard attack, meaning it provides you with extra economy while simultaneously slowing down your opponents’ turns. Generally, Militia is a strong attack. Purchasing one early on to slow down your opponents will often help you out in the long run, especially if you plan to eventually build an engine that will allow you to play it every turn. Most decks will contain exactly one Militia, as the attack does not stack.\nMilitia is most impactful in Kingdoms with strong trashing but weak draw, where your opponents are more likely to have to discard useful cards and less likely to be able to operate effectively with a reduced hand size. Militia is sometimes skippable in Kingdoms with strong draw and weak villages, where the attack is relatively unimpactful and Militia is an inefficient use of terminal space. Strong junking attacks can also make Militia skippable, as your opponents can simply discard the junk to the Militia attack.\nIn the early game Militia is often a strong purchase. Making an opponent discard a single Copper can be enough to ensure that they can’t afford what they wanted to buy.\nAfter the opening, Militia’s effectiveness depends on your opponents’ deck composition. Decks that have cleaned out their junk cards, usually in the form of Estate or Copper trashing, are more likely to have to discard something important. Similarly, decks that rely on having many of the same card in hand (e.g. Silver-flooding money decks) are also particularly susceptible. Decks built around rush strategies are typically unaffected by the discard attack as they typically don’t bother to trash their starting cards. Militia’s effect on engines varies, but it can be quite impactful if there is not a good way to ensure reliability (such as duration draw), because it increases the chance that your opponents’ engine will dud and increases the amount of draw necessary to fully draw their deck.\nMilitia synergizes with effects that draw cards for your opponents. For example, Council Room or Governor can provide you with very strong draw, at the expense of extra draw for your opponents; playing Militia afterwards helps nullify this downside by having them discard back down to 3 cards.\nMilitia has a few counters, some more obvious than others. Attack immunity cards such as Moat can block its attack, leaving your opponents unaffected. Some counters can even provide your opponents with some benefit when you play Militia. Your opponents’ Village Green can be played if you use Militia while they have it in hand to discard, and draw-to-X cards such as Library let the opponent discard below-average cards and replace them with cards from their deck.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true,
-        "Attack": true
-      },
-      "effects": [
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 2
-          }
         },
-        {
-          "name": "attackDiscardDownTo",
-          "params": {
-            "amount": 3
-          }
-        }
-      ]
-    },
-    "Moneylender": {
-      "description": "Costs 4 coins. You may trash a Copper from your hand for +3 coins.",
-      "strategy": "Moneylender provides a mix of economy and trashing. Many cards that trash from your hand can leave you generating little money on that turn, but Moneylender gives you a money boost when it trashes. Moneylender allows you to remove the Coppers from your deck while still allowing you to purchase the more expensive and powerful cards.\nThough Moneylender gives +$3, you have to trash a Copper instead of getting to play it, so the net economy you get is similar to Silver.\nMoneylender trashes only one card at a time, and often compares unfavorably to trashers that can trash multiple cards at once, such as Chapel. Moneylender also cannot trash Estates, and often benefits from being played alongside other cards that can, such as Remodel. The other trasher can then also trash the Moneylender once you have finished trashing your Coppers.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "trashCards",
-          "params": {
-            "amount": 1,
-            "mandatory": true,
-            "name": "Copper"
-          }
+        "Village": {
+            "description": "Costs 3 coins. When played +1 Card +2 Actions",
+            "strategy": "Village is an important card for engines, as it is one of the simplest and cheapest ways to enable a) playing terminal draw cards like Smithy while retaining the ability to play any Action cards they draw, and b) playing multiple terminal cards per turn, allowing you to use more than one terminal payload card.\nYou should only add Villages to your deck when you need to increase your terminal space, or the maximum number of terminals you can play in one turn. Your terminal space is directly related to the number of Villages or Village-like cards you play, and importantly has no benefit in and of itself; you need to take advantage of increased terminal space by playing more terminals. It follows that you need to line up your Villages and terminals in the same hand for this to occur. This is more likely when you have good deck control via thinning and/or draw, and/or multiple Villages and terminals.\nAs the only net benefit of playing a Village is increased terminal space, it is almost always a mistake to gain a Village during the opening turns; better to wait until you have at least a couple of terminals in your deck. Later in the game, as you build, you should aim to add Villages to increase your terminal space so that it matches your expected terminals per turn. If you’re drawing your deck, this usually means adding one Village for every terminal. If you’re not, you can sometimes get away with being overterminaled, or having more terminals than your villages can support, as you might not draw all your terminals.\nVillage should typically be avoided in money strategies, in which you don’t plan to obtain enough deck control to reliably line it up with your terminal Actions.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 3,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 2
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusTreasure",
-          "params": {
-            "ifYouDidTrash": true,
-            "amount": 3
-          }
-        }
-      ]
-    },
-    "Remodel": {
-      "description": "Costs 4 coins. Trash a card from your hand. Gain a card costing up to 2 coins more than it.",
-      "strategy": "Remodel is a flexible trasher and gainer.\nRemodel doesn't reduce your deck size like Chapel or Sentry, but it can replace your starting cards or junk cards with better cards. Out of those, Remodel is best at trashing Estates. Usually there's a desirable Kingdom card you can gain, such as Village or Throne Room, but even gaining a Silver is fine. It is less common to be able to gain a good card when trashing a $0 card such as Copper or Curse. Sometimes there is a decent $2 kingdom card that you're happy to gain, such as Pawn. Usually, you will prefer to trash your Coppers in another way, such as with Moneylender.\nNear the end of the game, Remodel can turn $6 cards (often Gold) into Provinces. Losing the Gold is often harmful, but having the capacity to gain an extra Province or two with Remodel on the last turn of the game is powerful. In the presence of efficient Gold gainers, like Bandit, Remodel trashing Gold to gain Provinces can be a sustainable greening strategy. Remodel can also be used to trash a Province into another Province (which is called milling a Province). This doesn't gain any VP, but it gives you more control over the end of the game. For example, if there are two Provinces left in the pile and you're down by no more than 5VP, you can Remodel Province into Province and then buy the last Province to win.\nRemodel has other uses that are more situational. Once you're done trashing Coppers, you can use Remodel to trash your Moneylender into something valuable. Once Curses are empty, you can trash your Witch and gain a stronger card. Midgame, you can trash a Silver and gain a $5 engine piece, such as Festival or Laboratory. You can trash a Silver or other unneeded $3 card to Duchy for more VP. It's rarely efficient to Remodel a card in multiple steps (e.g. Curse to Estate to $4 card), but sometimes it is the best thing to do.\nRemodel is best in Kingdoms where you have good uses for it throughout the game: trashing Estates early and gaining Provinces late. Remodel makes it more difficult to afford expensive cards, so you should avoid opening Remodel if there are important $5 cards to get. But Remodel can be valuable to add midgame, especially if you still have Estates to trash or have an efficient Gold gainer. Remodel is at its weakest in kingdoms with other strong Estate trashers (such as Chapel) and strong payload (such as Bridge).",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "trashCards",
-          "params": {
-            "amount": 1,
-            "mandatory": true
-          }
+        "Workshop": {
+            "description": "Costs 3 coins. When played Gain a card costing up to 4 coins.",
+            "strategy": "Workshop is at its best when there are strong $3 and $4 cards that you want a lot of. Typically these cards are cantrips (e.g. Merchant) or villages (e.g. Village or Throne Room). However, even when it's good, Workshop is still often a poor choice in the opening, because it is a terminal stop card that provides no $. This is a major drawback given that affording $5 cards such as Sentry in the opening is a common goal.\nIn the absence of strong targets for Workshop, it’s usually not worth going for. Using Workshop to gain Silvers is slow to benefit you, and you’re probably better off just buying the Silver to begin with and using it to buy better cards.\nWorkshop is weak compared to other up-to-$4 gainers. Ironworks, Inventor, and Groom are all examples of Workshop variants that have Workshop’s effect plus an extra bonus for $4, and the bonuses these cards provide give these other variants more use cases than Workshop. However, Workshop can be valuable when it is the only way to gain multiple cards per turn, allowing you to gain engine pieces faster than an opponent with no Workshops and only a single Buy per turn. In such single-Buy Kingdoms, the ability to build faster and gain an Estate or two near the end of the game can be decisive.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 3,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "costingUpTo": 4
+                    }
+                }
+            ]
         },
-        {
-          "name": "gainCard",
-          "params": {
-            "costingUpToMoreThanTrashed": 2
-          }
-        }
-      ]
-    },
-    "Smithy": {
-      "description": "Costs 4 coins. When played +3 Cards.",
-      "strategy": "Smithy is a draw card that increases your net hand size by 2. However, since it is a terminal Action, it may draw other Action cards dead if your deck lacks a village that you can play first.\nDraw is among the most important effects in Dominion. It is one of the main methods of achieving deck control, which in turn increases the value of your payload cards by allowing you to play them more often. Most good engines need to be able to draw cards in order to play more Actions and set up desired collisions; similarly, money strategies greatly appreciate larger hand sizes, which can more easily hit higher pricepoints.\nSmithy forms one component of the basic engine that most players first encounter: the Village/Smithy engine. With Village supplying +Actions, you can play multiple Smithies in a turn, and given enough of these pairs you can draw your deck, so building can consist of simply adding more and more pairs in the midgame to support an increasing amount of payload. Compared to Laboratory-based draw, Village/Smithy-based draw is slightly more likely to dud, as you need to be able to play Villages before your Smithies. If your deck is not thinned and/or can't sift through junk, you are less likely to be able to draw everything. If you know that you are likely to draw other Actions dead, it may be wise to avoid playing Smithy as the final or only Action of your turn, instead leaving those Actions to be played next turn.\nSmithy’s value in the opening is both Kingdom- and luck-dependent. The primary thing to note about opening with Smithy is that it’s likely to trigger an early reshuffle: in many games you will have a 12-card deck at the end of turn 2, and two 5-card hands plus the 3 cards drawn by Smithy guarantee that you’ll trigger a shuffle early (assuming you don’t bottomdeck Smithy). This can work out unfavorably: for example, if you open with Smithy/Silver, are unable to afford a good card turn 3, and play Smithy on turn 4, the Smithy will trigger a shuffle including your turn 3 hand and purchase(s). This will also cause Smithy to miss the shuffle, along with whatever else you have in hand or in play, likely forcing a mediocre hand for turn 5. If, however, you are able to play your Smithy on turn 3 and also purchase a $5 card, you’ll trigger a favorable early shuffle and are very likely to be able to play both on turn 5. It can be worth opening with Smithy if there is an early high pricepoint that you would like to hit, such as for Crop Rotation.\nThere are two things that may make Smithy look less attractive: limited terminal space and superior draw options. If there is an important terminal such as Witch and no villages available, skipping Smithy is reasonable. If an entirely different style of draw is stronger due to better payload options or reliability, e.g. draw-to-X with Festival/Library, you will also be less likely to gain Smithies. If there is another terminal draw card with an additional benefit, such as Council Room, you might also choose to gain a few of those instead of or alongside your Smithies.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 3
-          }
-        }
-      ]
-    },
-    "Throne Room": {
-      "description": "Costs 4 coins. When played you may play an Action card from your hand twice.",
-      "strategy": "Throne Room is a flexible card that can be a source of +Actions, draw, or payload. Throne Room depends on having other Action cards in hand, so it's better when your deck has a high density of Action cards. Therefore, Throne Room is less good early in the game, in games where you can't get rid of your starting cards, and in games without Action payload.\nThrone Room is an unusual source of +Actions. Using Throne Room to play an Action card twice nets you one more Action than you would have if you played two copies of that Action card. For example, playing two Laboratories leaves you with the same number of Actions you started with (netting +0 Actions). Throne Room playing Laboratory nets you +1 Action—if you started with 1 Action, you would end with 2. Playing two copies of a terminal Action such as Smithy costs 2 Actions; Throne Room playing a Smithy draws the same number of cards but costs only 1 Action.\nUsing Throne Room to play a Throne Room does not increase the number of Action cards you can double-play, but it does grant +1 net Action. For example, using Throne Room to play Throne Room to play two Laboratories grants +3 net Actions. Chaining Throne Rooms in this way is especially useful with terminal draw cards. You can start a turn by playing Throne Room playing Throne Room playing Smithy, at which point you draw 6 cards and then can duplicate one more Action card from your hand. If you can play a non-terminal Action, you can continue playing more Action cards after that. You can even continue the chain of alternating Throne Rooms and terminal Actions. Throne Room is a very efficient source of +Actions in decks with strong non-terminal cards like Laboratory. With mostly terminal Actions, Throne Room is more awkward. You generally need two Throne Rooms and a terminal draw card in your starting hand to be able to fully exploit your deck’s capabilities, and your deck is more fragile as a result. For that reason, Throne Room benefits from an alternative source of +Actions, especially one that carries over to the next turn, such as Villagers or Fishing Village.\nThrone Room can duplicate the on-play effect of any Action card, so it varies in strength based on the Action cards in the kingdom. Using Throne Room on cheaper Action cards such as Merchant or Village is okay, but Throne Room is even stronger when you can use it to double-play cards such as Artisan and Laboratory that are both more expensive to gain and more impactful on play. Some cards have effects that don’t stack, e.g. draw-to-X cards such as Library) and certain Attacks (e.g. Militia), so using Throne Room on them has little to no value. Strong Duration cards such as Wharf can be good targets for Throne Room, but be aware that the Throne Room will stay in play with the Duration card, meaning that you can’t play the Throne Room on the next turn.\nThrone Room offers a lot of flexibility, both during a single turn and throughout the game. Within a single turn, you can use early Throne Rooms to help you draw your deck, and later ones to amplify your Action payload. As the game progresses, you can adjust the number of Throne Rooms you use on drawing cards to adapt to the number of stop cards in your deck. Throne Rooms also allow you to pivot strategies more easily as the game proceeds. For instance, playing multiple Witches early in the game allows you to attack your opponents more quickly, but Witch becomes much less useful after the Curse pile empties. Using Throne Room, you can duplicate the Attack of a single Witch early on, and then choose to play Throne Room with other cards later, allowing you to avoid having to gain multiple Witches. In games with an important Action card whose pile might empty, Throne Room can allow you to play additional copies, enabling you to prioritize other objectives over ensuring you get enough copies of that card.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 4,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "playOtherCard",
-          "params": {
-            "amount": 2
-          }
-        }
-      ]
-    },
-    "Council Room": {
-      "description": "Costs 5 coins. When played +4 Cards +1 Buy - Each other player draws a card.",
-      "strategy": "Council Room is a draw card similar to Smithy, but giving all players an extra card. Its +Buy offers some flexibility in building.\nWith a village, Council Room makes for strong deck-drawing engines. Compared to a Village / Smithy engine, Council Room comes with a built-in +Buy.\nThere are two main problems with engines that only use Council Room as draw:\n* Your opponents get to draw a card every time you play a Council Room. This free draw is very powerful - it’s as if they played a Laboratory before their turn started.\n* Since each Council Room draws so much, you need fewer of them to draw your deck (which is the goal of most engines). This increases the likelihood of a dud, caused by not finding your Council Room in your starting hand. You can try to avoid this second issue by just buying more Council Rooms, but this can leave you with lots of inefficient overdraw.\nHowever, if your opponents are also playing Council Rooms, chances are you will start your turn with more than 5 cards in hand.\nEngines become more reliable when using Council Room as a supplement to other draw cards, for example Laboratory. In this case, duds are less likely, and your opponent is drawing fewer cards on your turn.\nYou can mitigate the drawback of Council Room by playing with a handsize attack, such as Militia. No matter how many Council Rooms you play, they'll still have to discard down to a 3 card hand. This does allow them to sift through bad cards and approach a reshuffle sooner, though, so the card draw is not completely counteracted.\nCouncil Room is also a strong Big Money enabler in the Base set: this strategy involves opening with two Silvers, then only buying Treasure cards and 1–2 Council Rooms before greening. Although powerful for newcomers to Dominion, this does not reach the full potential of Council Room.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 4
-          }
+        "Bureaucrat": {
+            "description": "Costs 4 coins. When played Gain a Silver onto your deck. Each other player reveals a Victory card from their hand and puts it onto their deck (or reveals a hand with no Victory cards).",
+            "strategy": "Bureaucrat is an extremely weak card. It does two things: it attacks your opponent and it gains a Silver to the top of your deck. The Attack is weak and is often only a minor annoyance. It does nothing for most of the game if your opponent is able to trash their Estates. Furthermore, although gaining Silvers can be helpful, it is usually best not to have them on top of your deck. You would rather have drawing cards, such as Laboratory, on the top of your deck and payload cards, such as Silver, at the bottom where you can draw them later in your turn. Playing a Bureaucrat also often hurts your current turn by taking up space in your hand and using an Action but not providing any benefit until the next turn, when you draw the Silver. Since good turns now lead to better turns later, cards that do not improve your current turn can be difficult to justify.\nBureaucrat is a card that is only worth getting in a few scenarios. The main use is when you can draw your deck, play the Bureaucrat, and then play another card to draw the Silver that turn. In that instance, Bureaucrat can be a relatively efficient way to increase your deck’s $. Alternatively, on a very weak board, gaining many Silvers can be worth it, and the top-decking can actually be helpful. Furthermore, your opponent is likely to be unable to trash their Estates and will be adding Victory cards to their deck gradually, so the attack will have more opportunities to succeed. In very rare cases, Bureaucrat can also disrupt decks that rely on very precise shuffle management (e.g., some Golden deck variants), although other Attack cards will usually be more effective. Even in these contexts, there is almost always some better card than Bureaucrat to be playing.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true,
+                "Attack": true
+            },
+            "effects": [
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "name": "Silver",
+                        "onTopOfDeck": true
+                    }
+                },
+                {
+                    "name": "attackPutCardsOnDeck",
+                    "params": {
+                        "type": "Victory",
+                        "amount": 1,
+                        "else": {
+                            "name": "revealHand"
+                        }
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusBuy",
-          "params": {
-            "amount": 1
-          }
+        "Gardens": {
+            "description": "Cost 4 coins. Worth 1 victory point per 10 cards you have (round down).",
+            "strategy": "Gardens is the first example of alt-VP that most Dominion players will experience. Alt-VP generally provides an advantage to engine strategies versus more Treasure-oriented strategies through an indirect mechanism: While the simpler, Treasure-oriented strategy can often get an early lead on Provinces, the engine strategy often tries to compensate by getting additional non-Province sources of VP such as Duchies after building their deck to a state where they are gaining more than one card per turn. This is because buying Provinces may risk causing the game to end before the engine player has regained a points lead, so the engine player needs to diversify their sources of VP. In this context, Gardens provides another source of VP, which is particularly valuable in engine decks with gainers like Workshop which both lead to large decks and allow for the easy acquisition of Gardens.\nThat being said, the advantage to engine strategies that Gardens provides is typically not very large. Gardens is often just a Duchy that costs $4. In some engines with heavy trashing, Gardens can result in even fewer VP than Duchy. Thus, Gardens is primarily valuable in engines that feature very large numbers of gains or where Gardens costing $4 allows it to be gained significantly more easily than Duchy.\nOccasionally, Gardens is a centralizing card that enables a non-engine strategy called a rush. In the Base set, this is typified by the Workshop-Gardens rush. To play this strategy, you try to first gain all the Workshops, then gain all the Gardens, and finally end the game with a VP lead by emptying a third pile (often Estate). This strategy is very rarely the strongest available strategy because Workshop is a weak gainer. Many Workshop variants perform similarly, but there are a few like Groom which can make this strategy very powerful.\nEven more rarely, Gardens can be centralizing for strategies that aren’t rushes, most notably Beggar-Gardens, where players try to make Gardens worth more VP than Province.",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Victory": true
+            },
+            "victory": [
+                {
+                    "type": "perCardInDeck",
+                    "params": {
+                        "divisor": 10,
+                        "multiplier": 1
+                    }
+                }
+            ]
         },
-        {
-          "name": "otherPlayersDraw",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Festival": {
-      "description": "Costs 5 coins. When played +2 Actions +1 Buy +2 Coins",
-      "strategy": "Festival fulfills multiple important roles in a deck-drawing engine, giving a village effect of +2 Actions and also +Buy for extra gains. However, it is a stop card, meaning that it does not draw any cards (unlike, e.g. Village). If put into a deck that cannot effectively use the +Actions and +Buy, it is usually no better than a fancy Silver.\nFestival synergizes well with draw-to-X cards like Library by helping you to reduce handsize before playing your next draw card. A deck using Festival and Library will use as few Treasures as possible (often none at all) in order to maximize card draw from Library—in this case, Festival’s +$2 and +1 Buy is the driving force that enables the deck’s buying power. This deck will still need to find a Library in the starting hand, however. Such a deck might be unreliable without trashing or removing non-Action card junk (e.g. Coppers and Estates).\nFestival is usually a decent or good source of economy. Being Action-based virtual coin also allows for useful interactions with many other Action cards, such as Vassal and Throne Room.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 2
-          }
+        "Militia": {
+            "description": "Costs 4 coins. When played +2 Coins - Each other player discards down to 3 cards in hand.",
+            "strategy": "Militia is a terminal silver and a discard attack, meaning it provides you with extra economy while simultaneously slowing down your opponents’ turns. Generally, Militia is a strong attack. Purchasing one early on to slow down your opponents will often help you out in the long run, especially if you plan to eventually build an engine that will allow you to play it every turn. Most decks will contain exactly one Militia, as the attack does not stack.\nMilitia is most impactful in Kingdoms with strong trashing but weak draw, where your opponents are more likely to have to discard useful cards and less likely to be able to operate effectively with a reduced hand size. Militia is sometimes skippable in Kingdoms with strong draw and weak villages, where the attack is relatively unimpactful and Militia is an inefficient use of terminal space. Strong junking attacks can also make Militia skippable, as your opponents can simply discard the junk to the Militia attack.\nIn the early game Militia is often a strong purchase. Making an opponent discard a single Copper can be enough to ensure that they can’t afford what they wanted to buy.\nAfter the opening, Militia’s effectiveness depends on your opponents’ deck composition. Decks that have cleaned out their junk cards, usually in the form of Estate or Copper trashing, are more likely to have to discard something important. Similarly, decks that rely on having many of the same card in hand (e.g. Silver-flooding money decks) are also particularly susceptible. Decks built around rush strategies are typically unaffected by the discard attack as they typically don’t bother to trash their starting cards. Militia’s effect on engines varies, but it can be quite impactful if there is not a good way to ensure reliability (such as duration draw), because it increases the chance that your opponents’ engine will dud and increases the amount of draw necessary to fully draw their deck.\nMilitia synergizes with effects that draw cards for your opponents. For example, Council Room or Governor can provide you with very strong draw, at the expense of extra draw for your opponents; playing Militia afterwards helps nullify this downside by having them discard back down to 3 cards.\nMilitia has a few counters, some more obvious than others. Attack immunity cards such as Moat can block its attack, leaving your opponents unaffected. Some counters can even provide your opponents with some benefit when you play Militia. Your opponents’ Village Green can be played if you use Militia while they have it in hand to discard, and draw-to-X cards such as Library let the opponent discard below-average cards and replace them with cards from their deck.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true,
+                "Attack": true
+            },
+            "effects": [
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "attackDiscardDownTo",
+                    "params": {
+                        "amount": 3
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusBuy",
-          "params": {
-            "amount": 1
-          }
+        "Moneylender": {
+            "description": "Costs 4 coins. You may trash a Copper from your hand for +3 coins.",
+            "strategy": "Moneylender provides a mix of economy and trashing. Many cards that trash from your hand can leave you generating little money on that turn, but Moneylender gives you a money boost when it trashes. Moneylender allows you to remove the Coppers from your deck while still allowing you to purchase the more expensive and powerful cards.\nThough Moneylender gives +$3, you have to trash a Copper instead of getting to play it, so the net economy you get is similar to Silver.\nMoneylender trashes only one card at a time, and often compares unfavorably to trashers that can trash multiple cards at once, such as Chapel. Moneylender also cannot trash Estates, and often benefits from being played alongside other cards that can, such as Remodel. The other trasher can then also trash the Moneylender once you have finished trashing your Coppers.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "trashCards",
+                    "params": {
+                        "amount": 1,
+                        "mandatory": true,
+                        "name": "Copper"
+                    }
+                },
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "ifYouDidTrash": true,
+                        "amount": 3
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 2
-          }
-        }
-      ]
-    },
-    "Laboratory": {
-      "description": "Costs 5 coins. When played +2 Cards +1 Action",
-      "strategy": "Laboratory is one of the stronger cards in the Base set, with a net effect of increasing your hand size by one. Drawing more cards into your hand is a good way to do more during your turn, and Laboratory does this without any support.\nHowever, it costs more than some other methods of draw: for example, compare a Village-Smithy pair to two Laboratories. The net effect of playing these cards is the same, increasing your hand size by two, but the total cost of two Laboratories is $3 more. At $5 apiece, getting enough $ in hand to buy them is also more difficult. Laboratory's biggest strength is that unlike village/terminal draw setups, Laboratories work independently; if you draw your Smithy without your Village, you might be left without any Actions to continue your Action phase, but if you only draw one Laboratory in your starting hand, you can immediately play it and continue playing your other Action cards. Because of this flexibility, Laboratories can be safely added to most decks for extra consistency and draw. As such, Laboratory gets significantly stronger if you have a way to gain it in bulk, such as with Artisan.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 2
-          }
+        "Remodel": {
+            "description": "Costs 4 coins. Trash a card from your hand. Gain a card costing up to 2 coins more than it.",
+            "strategy": "Remodel is a flexible trasher and gainer.\nRemodel doesn't reduce your deck size like Chapel or Sentry, but it can replace your starting cards or junk cards with better cards. Out of those, Remodel is best at trashing Estates. Usually there's a desirable Kingdom card you can gain, such as Village or Throne Room, but even gaining a Silver is fine. It is less common to be able to gain a good card when trashing a $0 card such as Copper or Curse. Sometimes there is a decent $2 kingdom card that you're happy to gain, such as Pawn. Usually, you will prefer to trash your Coppers in another way, such as with Moneylender.\nNear the end of the game, Remodel can turn $6 cards (often Gold) into Provinces. Losing the Gold is often harmful, but having the capacity to gain an extra Province or two with Remodel on the last turn of the game is powerful. In the presence of efficient Gold gainers, like Bandit, Remodel trashing Gold to gain Provinces can be a sustainable greening strategy. Remodel can also be used to trash a Province into another Province (which is called milling a Province). This doesn't gain any VP, but it gives you more control over the end of the game. For example, if there are two Provinces left in the pile and you're down by no more than 5VP, you can Remodel Province into Province and then buy the last Province to win.\nRemodel has other uses that are more situational. Once you're done trashing Coppers, you can use Remodel to trash your Moneylender into something valuable. Once Curses are empty, you can trash your Witch and gain a stronger card. Midgame, you can trash a Silver and gain a $5 engine piece, such as Festival or Laboratory. You can trash a Silver or other unneeded $3 card to Duchy for more VP. It's rarely efficient to Remodel a card in multiple steps (e.g. Curse to Estate to $4 card), but sometimes it is the best thing to do.\nRemodel is best in Kingdoms where you have good uses for it throughout the game: trashing Estates early and gaining Provinces late. Remodel makes it more difficult to afford expensive cards, so you should avoid opening Remodel if there are important $5 cards to get. But Remodel can be valuable to add midgame, especially if you still have Estates to trash or have an efficient Gold gainer. Remodel is at its weakest in kingdoms with other strong Estate trashers (such as Chapel) and strong payload (such as Bridge).",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "trashCards",
+                    "params": {
+                        "amount": 1,
+                        "mandatory": true
+                    }
+                },
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "costingUpToMoreThanTrashed": 2
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Library": {
-      "description": "Costs 5 coins. When played Draw until you have 7 cards in hand, skipping any Action cards you choose to; set those aside, discarding them afterwards.",
-      "strategy": "Library is a draw-to-X card: that is, rather than drawing a fixed number of cards, it allows you to continue drawing until you have a specific number in hand. Library’s drawing power is therefore dependent on your hand size: it draws more cards when you play it from a hand of few cards. This gives it a different set of advantages, disadvantages, and synergies compared to more typical draw cards such as Smithy. The ability to skip past Action cards also provides some flexibility and sifting, although the fact that Library is terminal and cannot sift past Treasures or junk makes it difficult to use without strong support. It works best in engines with good thinning, Action-based payload, and abundant villages, and you’ll usually look to add a Library after you’ve started preparing your deck by thinning. In the absence of these supporting effects, it’s usually not worth using Library to try and draw.\nWhen using Library (or more generally any draw-to-X card) as your primary draw, your approach to various archetypes of cards changes. Generally speaking, Action stop cards become much more attractive, as their biggest disadvantage (that they don’t draw) is less of a concern because playing them first then allows your Library to draw more. Library therefore works well with villages that don’t draw cards (e.g. Festival)—while you lose some reliability compared to Village, you lose no drawing power overall. It also negates the downside of discard-for-benefit cards; for example, discarding with Artificer leaves you with a smaller hand size, but playing Library afterwards voids this downside. Additionally, if you can decrease your hand size any other way (e.g., by first playing a payload stop card such as Vassal or a trash for benefit card such as Remodel), your Library can draw even more cards. Treasures, on the other hand, are much worse payload with Library, since they can't generally be played until the Buy phase, so they are stuck taking up space in your hand (although some cards change this, notably Villa and Black Market). For the same reason, trashing your starting cards (e.g., via Chapel) can greatly improve the efficacy of a draw-to-X deck, although it’s sometimes possible to use sifting effects such as Cellar as a substitute for this. Library also partially counters discarding attacks such as Militia. The flip side of this is that there is a hard limit on your hand size if you are just using Library for draw, so multiple copies don’t stack unless you can decrease your hand size between playing them (similarly, using Throne Room to play Library is much less desirable than using it to play Smithy).\nThe option to skip Action cards when drawing with Library is rarely very impactful, because these are usually the cards that you most want to draw and play. The effect is occasionally useful, however: it may allow you to skip useless Action cards such as Ruins, avoid terminal collision or drawing Actions dead if you have limited remaining terminal space, or sift through your deck for a key card that you specifically want to play, such as a village, Attack, or Traveller.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "libraryDraw"
-        }
-      ]
-    },
-    "Market": {
-      "description": "Costs 5 coins. When played +1 Card +1 Action +1 Buy +1 Coins",
-      "strategy": "Market is a $5 cantrip card that allows you to make extra purchases on your turn and gives +$1. Market’s extra +Buy can be important if your deck can yield a lot of $, and it gives +$ of its own without being a stop card. Market is usually good in kingdoms with good trashing but without strong draw, where its cantrip economy allows you to generate $ without having to rely on stop cards.\nAs cantrips, Markets can chain themselves without much trouble. Playing several Markets in succession generates a decent amount of $, but usually the more important aspect of Market is that a Market stack gives many +Buys, allowing you to buy many cheap cards at once. While this chaining ability can be strong, having many extra Buys may not do much for your deck, and $1 is a relatively small amount of money. Furthermore, as a card costing $5 the opportunity cost of Market is usually high.\nMarket usually shouldn’t be gained early in the game. Without desirable cheap cards (e.g. Pixie, Fool's Gold) and before you have strong payload, you cannot utilize Market’s extra Buy efficiently. As such, buying a Market on your first two turns is generally a poor use of your opening. In the midgame, you should anticipate when an extra buy will allow you to gain extra cards and get Market shortly before this happens.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Smithy": {
+            "description": "Costs 4 coins. When played +3 Cards.",
+            "strategy": "Smithy is a draw card that increases your net hand size by 2. However, since it is a terminal Action, it may draw other Action cards dead if your deck lacks a village that you can play first.\nDraw is among the most important effects in Dominion. It is one of the main methods of achieving deck control, which in turn increases the value of your payload cards by allowing you to play them more often. Most good engines need to be able to draw cards in order to play more Actions and set up desired collisions; similarly, money strategies greatly appreciate larger hand sizes, which can more easily hit higher pricepoints.\nSmithy forms one component of the basic engine that most players first encounter: the Village/Smithy engine. With Village supplying +Actions, you can play multiple Smithies in a turn, and given enough of these pairs you can draw your deck, so building can consist of simply adding more and more pairs in the midgame to support an increasing amount of payload. Compared to Laboratory-based draw, Village/Smithy-based draw is slightly more likely to dud, as you need to be able to play Villages before your Smithies. If your deck is not thinned and/or can't sift through junk, you are less likely to be able to draw everything. If you know that you are likely to draw other Actions dead, it may be wise to avoid playing Smithy as the final or only Action of your turn, instead leaving those Actions to be played next turn.\nSmithy’s value in the opening is both Kingdom- and luck-dependent. The primary thing to note about opening with Smithy is that it’s likely to trigger an early reshuffle: in many games you will have a 12-card deck at the end of turn 2, and two 5-card hands plus the 3 cards drawn by Smithy guarantee that you’ll trigger a shuffle early (assuming you don’t bottomdeck Smithy). This can work out unfavorably: for example, if you open with Smithy/Silver, are unable to afford a good card turn 3, and play Smithy on turn 4, the Smithy will trigger a shuffle including your turn 3 hand and purchase(s). This will also cause Smithy to miss the shuffle, along with whatever else you have in hand or in play, likely forcing a mediocre hand for turn 5. If, however, you are able to play your Smithy on turn 3 and also purchase a $5 card, you’ll trigger a favorable early shuffle and are very likely to be able to play both on turn 5. It can be worth opening with Smithy if there is an early high pricepoint that you would like to hit, such as for Crop Rotation.\nThere are two things that may make Smithy look less attractive: limited terminal space and superior draw options. If there is an important terminal such as Witch and no villages available, skipping Smithy is reasonable. If an entirely different style of draw is stronger due to better payload options or reliability, e.g. draw-to-X with Festival/Library, you will also be less likely to gain Smithies. If there is another terminal draw card with an additional benefit, such as Council Room, you might also choose to gain a few of those instead of or alongside your Smithies.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 3
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Throne Room": {
+            "description": "Costs 4 coins. When played you may play an Action card from your hand twice.",
+            "strategy": "Throne Room is a flexible card that can be a source of +Actions, draw, or payload. Throne Room depends on having other Action cards in hand, so it's better when your deck has a high density of Action cards. Therefore, Throne Room is less good early in the game, in games where you can't get rid of your starting cards, and in games without Action payload.\nThrone Room is an unusual source of +Actions. Using Throne Room to play an Action card twice nets you one more Action than you would have if you played two copies of that Action card. For example, playing two Laboratories leaves you with the same number of Actions you started with (netting +0 Actions). Throne Room playing Laboratory nets you +1 Action—if you started with 1 Action, you would end with 2. Playing two copies of a terminal Action such as Smithy costs 2 Actions; Throne Room playing a Smithy draws the same number of cards but costs only 1 Action.\nUsing Throne Room to play a Throne Room does not increase the number of Action cards you can double-play, but it does grant +1 net Action. For example, using Throne Room to play Throne Room to play two Laboratories grants +3 net Actions. Chaining Throne Rooms in this way is especially useful with terminal draw cards. You can start a turn by playing Throne Room playing Throne Room playing Smithy, at which point you draw 6 cards and then can duplicate one more Action card from your hand. If you can play a non-terminal Action, you can continue playing more Action cards after that. You can even continue the chain of alternating Throne Rooms and terminal Actions. Throne Room is a very efficient source of +Actions in decks with strong non-terminal cards like Laboratory. With mostly terminal Actions, Throne Room is more awkward. You generally need two Throne Rooms and a terminal draw card in your starting hand to be able to fully exploit your deck’s capabilities, and your deck is more fragile as a result. For that reason, Throne Room benefits from an alternative source of +Actions, especially one that carries over to the next turn, such as Villagers or Fishing Village.\nThrone Room can duplicate the on-play effect of any Action card, so it varies in strength based on the Action cards in the kingdom. Using Throne Room on cheaper Action cards such as Merchant or Village is okay, but Throne Room is even stronger when you can use it to double-play cards such as Artisan and Laboratory that are both more expensive to gain and more impactful on play. Some cards have effects that don’t stack, e.g. draw-to-X cards such as Library) and certain Attacks (e.g. Militia), so using Throne Room on them has little to no value. Strong Duration cards such as Wharf can be good targets for Throne Room, but be aware that the Throne Room will stay in play with the Duration card, meaning that you can’t play the Throne Room on the next turn.\nThrone Room offers a lot of flexibility, both during a single turn and throughout the game. Within a single turn, you can use early Throne Rooms to help you draw your deck, and later ones to amplify your Action payload. As the game progresses, you can adjust the number of Throne Rooms you use on drawing cards to adapt to the number of stop cards in your deck. Throne Rooms also allow you to pivot strategies more easily as the game proceeds. For instance, playing multiple Witches early in the game allows you to attack your opponents more quickly, but Witch becomes much less useful after the Curse pile empties. Using Throne Room, you can duplicate the Attack of a single Witch early on, and then choose to play Throne Room with other cards later, allowing you to avoid having to gain multiple Witches. In games with an important Action card whose pile might empty, Throne Room can allow you to play additional copies, enabling you to prioritize other objectives over ensuring you get enough copies of that card.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 4,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "playOtherCard",
+                    "params": {
+                        "amount": 2
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusBuy",
-          "params": {
-            "amount": 1
-          }
+        "Council Room": {
+            "description": "Costs 5 coins. When played +4 Cards +1 Buy - Each other player draws a card.",
+            "strategy": "Council Room is a draw card similar to Smithy, but giving all players an extra card. Its +Buy offers some flexibility in building.\nWith a village, Council Room makes for strong deck-drawing engines. Compared to a Village / Smithy engine, Council Room comes with a built-in +Buy.\nThere are two main problems with engines that only use Council Room as draw:\n* Your opponents get to draw a card every time you play a Council Room. This free draw is very powerful - it’s as if they played a Laboratory before their turn started.\n* Since each Council Room draws so much, you need fewer of them to draw your deck (which is the goal of most engines). This increases the likelihood of a dud, caused by not finding your Council Room in your starting hand. You can try to avoid this second issue by just buying more Council Rooms, but this can leave you with lots of inefficient overdraw.\nHowever, if your opponents are also playing Council Rooms, chances are you will start your turn with more than 5 cards in hand.\nEngines become more reliable when using Council Room as a supplement to other draw cards, for example Laboratory. In this case, duds are less likely, and your opponent is drawing fewer cards on your turn.\nYou can mitigate the drawback of Council Room by playing with a handsize attack, such as Militia. No matter how many Council Rooms you play, they'll still have to discard down to a 3 card hand. This does allow them to sift through bad cards and approach a reshuffle sooner, though, so the card draw is not completely counteracted.\nCouncil Room is also a strong Big Money enabler in the Base set: this strategy involves opening with two Silvers, then only buying Treasure cards and 1–2 Council Rooms before greening. Although powerful for newcomers to Dominion, this does not reach the full potential of Council Room.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 4
+                    }
+                },
+                {
+                    "name": "plusBuy",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "otherPlayersDraw",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Mine": {
-      "description": "Costs 5 coins. When played You may trash a Treasure from your hand. Gain a Treasure to your hand costing up to 3 coins more than it.",
-      "strategy": "Mine is rarely worth gaining, primarily due to its high opportunity cost: it’s an expensive card at $5, a price point highly likely to offer something that will benefit your deck much more than Mine at any stage of the game.\nAlthough trashing your Coppers is usually an important objective, the primary reason to do so is to thin your deck by reducing the density of stop cards, allowing you to draw and play your powerful Action cards more frequently. Mine’s major weakness is that it doesn’t help with this goal, because it replaces Copper with another Treasure. Swapping Copper for Silver or Silver for Gold increases your purchasing power slightly (analogous to gaining a Peddler), but won’t do anything to help your deck run more smoothly. Mine is also very slow to enact these improvements: although you can at least play your new Treasure immediately, Mine only upgrades one Treasure at a time. Because this benefit is slow to accumulate, it has the greatest impact when Mine is acquired early; but as a payload card that doesn’t help with deck control, it’s a poor choice early on. Furthermore, as a terminal card, Mine competes for terminal space with other cards that are likely to have a much greater impact, such as draw cards like Smithy or more effective trashers like Chapel.\nMine might have a role to play when useful Kingdom Treasures such as Supplies are in the game and gains are otherwise severely limited. Gaining Ducat with Mine does provide a thinning effect, since you can trash an additional Copper; gaining Stockpile works similarly, since the Stockpile is Exiled when you play it. Finally, with Capitalism, Mine can gain certain Action cards, which is likely to be more powerful than gaining Treasures.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "trashCards",
-          "params": {
-            "amount": 1,
-            "mandatory": true,
-            "type": "Treasure"
-          }
+        "Festival": {
+            "description": "Costs 5 coins. When played +2 Actions +1 Buy +2 Coins",
+            "strategy": "Festival fulfills multiple important roles in a deck-drawing engine, giving a village effect of +2 Actions and also +Buy for extra gains. However, it is a stop card, meaning that it does not draw any cards (unlike, e.g. Village). If put into a deck that cannot effectively use the +Actions and +Buy, it is usually no better than a fancy Silver.\nFestival synergizes well with draw-to-X cards like Library by helping you to reduce handsize before playing your next draw card. A deck using Festival and Library will use as few Treasures as possible (often none at all) in order to maximize card draw from Library—in this case, Festival’s +$2 and +1 Buy is the driving force that enables the deck’s buying power. This deck will still need to find a Library in the starting hand, however. Such a deck might be unreliable without trashing or removing non-Action card junk (e.g. Coppers and Estates).\nFestival is usually a decent or good source of economy. Being Action-based virtual coin also allows for useful interactions with many other Action cards, such as Vassal and Throne Room.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "plusBuy",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 2
+                    }
+                }
+            ]
         },
-        {
-          "name": "gainCard",
-          "params": {
-            "costingUpToMoreThanTrashed": 3,
-            "intoHand": true,
-            "type": "Treasure"
-          }
-        }
-      ]
-    },
-    "Witch": {
-      "description": "Costs 5 coins. When played +2 Cards - Each other player gains a Curse.",
-      "strategy": "Witch is a curser and terminal draw card from the Base set. It can be centralizing in many Kingdoms, especially if trashing Curses is difficult.\nCurses in your opponents’ decks serve two primary purposes:\n* Curses are stop cards that reduce the average value of the cards in their deck. Adding more curses to your opponent’s deck makes it harder for them to draw through their deck. Lining up cards that benefit from being drawn together (e.g. Village/Smithy) becomes less likely.\n* Curses give negative VP if they are not trashed by the end of the game.\nBecause of this, Witch often leads to longer games.\nIn the absence of trashing, an initial priority should be to deal out more Curses than your opponents before the pile is empty. Purchasing an early Witch, ideally as your first $5 card, is a good way to ensure that you “win the Curse split”: dealing out more Curses than your opponents. A second Witch may help you distribute Curses even faster. Games with Witch and no trashing are likely to be slogs.\nEven when trashing is available, Witch can still be an efficient way to slow down your opponents’ decks, unless the trashing is very strong (e.g. kingdoms with Chapel). Getting control of your deck becomes more difficult if you need to trash Curses as well as your starting cards. Many trashers, such as Remodel, are bad at trashing Curses and are better at trashing your Estates. These trashers may be too slow to overcome an influx of Curses.\nAs a terminal draw card, Witch’s +2 Cards can be useful, but it is rarely used primarily for its draw. Early on, the drawing effect can help you afford more expensive cards and draw faster through your shuffle.",
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Base Set",
-      "cost": 5,
-      "type": {
-        "Action": true,
-        "Attack": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 2
-          }
+        "Laboratory": {
+            "description": "Costs 5 coins. When played +2 Cards +1 Action",
+            "strategy": "Laboratory is one of the stronger cards in the Base set, with a net effect of increasing your hand size by one. Drawing more cards into your hand is a good way to do more during your turn, and Laboratory does this without any support.\nHowever, it costs more than some other methods of draw: for example, compare a Village-Smithy pair to two Laboratories. The net effect of playing these cards is the same, increasing your hand size by two, but the total cost of two Laboratories is $3 more. At $5 apiece, getting enough $ in hand to buy them is also more difficult. Laboratory's biggest strength is that unlike village/terminal draw setups, Laboratories work independently; if you draw your Smithy without your Village, you might be left without any Actions to continue your Action phase, but if you only draw one Laboratory in your starting hand, you can immediately play it and continue playing your other Action cards. Because of this flexibility, Laboratories can be safely added to most decks for extra consistency and draw. As such, Laboratory gets significantly stronger if you have a way to gain it in bulk, such as with Artisan.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
         },
-        {
-          "name": "attackGainCard",
-          "params": {
-            "name": "Curse"
-          }
-        }
-      ]
-    },
-    "Courtyard": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Intrigue",
-      "cost": 2,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 3
-          }
+        "Library": {
+            "description": "Costs 5 coins. When played Draw until you have 7 cards in hand, skipping any Action cards you choose to; set those aside, discarding them afterwards.",
+            "strategy": "Library is a draw-to-X card: that is, rather than drawing a fixed number of cards, it allows you to continue drawing until you have a specific number in hand. Library’s drawing power is therefore dependent on your hand size: it draws more cards when you play it from a hand of few cards. This gives it a different set of advantages, disadvantages, and synergies compared to more typical draw cards such as Smithy. The ability to skip past Action cards also provides some flexibility and sifting, although the fact that Library is terminal and cannot sift past Treasures or junk makes it difficult to use without strong support. It works best in engines with good thinning, Action-based payload, and abundant villages, and you’ll usually look to add a Library after you’ve started preparing your deck by thinning. In the absence of these supporting effects, it’s usually not worth using Library to try and draw.\nWhen using Library (or more generally any draw-to-X card) as your primary draw, your approach to various archetypes of cards changes. Generally speaking, Action stop cards become much more attractive, as their biggest disadvantage (that they don’t draw) is less of a concern because playing them first then allows your Library to draw more. Library therefore works well with villages that don’t draw cards (e.g. Festival)—while you lose some reliability compared to Village, you lose no drawing power overall. It also negates the downside of discard-for-benefit cards; for example, discarding with Artificer leaves you with a smaller hand size, but playing Library afterwards voids this downside. Additionally, if you can decrease your hand size any other way (e.g., by first playing a payload stop card such as Vassal or a trash for benefit card such as Remodel), your Library can draw even more cards. Treasures, on the other hand, are much worse payload with Library, since they can't generally be played until the Buy phase, so they are stuck taking up space in your hand (although some cards change this, notably Villa and Black Market). For the same reason, trashing your starting cards (e.g., via Chapel) can greatly improve the efficacy of a draw-to-X deck, although it’s sometimes possible to use sifting effects such as Cellar as a substitute for this. Library also partially counters discarding attacks such as Militia. The flip side of this is that there is a hard limit on your hand size if you are just using Library for draw, so multiple copies don’t stack unless you can decrease your hand size between playing them (similarly, using Throne Room to play Library is much less desirable than using it to play Smithy).\nThe option to skip Action cards when drawing with Library is rarely very impactful, because these are usually the cards that you most want to draw and play. The effect is occasionally useful, however: it may allow you to skip useless Action cards such as Ruins, avoid terminal collision or drawing Actions dead if you have limited remaining terminal space, or sift through your deck for a key card that you specifically want to play, such as a village, Attack, or Traveller.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "libraryDraw"
+                }
+            ]
         },
-        {
-          "name": "putCardsOnDeck",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Great Hall": {
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Intrigue",
-      "cost": 3,
-      "type": {
-        "Action": true,
-        "Victory": true
-      },
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": 1
-          }
-        }
-      ],
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Market": {
+            "description": "Costs 5 coins. When played +1 Card +1 Action +1 Buy +1 Coins",
+            "strategy": "Market is a $5 cantrip card that allows you to make extra purchases on your turn and gives +$1. Market’s extra +Buy can be important if your deck can yield a lot of $, and it gives +$ of its own without being a stop card. Market is usually good in kingdoms with good trashing but without strong draw, where its cantrip economy allows you to generate $ without having to rely on stop cards.\nAs cantrips, Markets can chain themselves without much trouble. Playing several Markets in succession generates a decent amount of $, but usually the more important aspect of Market is that a Market stack gives many +Buys, allowing you to buy many cheap cards at once. While this chaining ability can be strong, having many extra Buys may not do much for your deck, and $1 is a relatively small amount of money. Furthermore, as a card costing $5 the opportunity cost of Market is usually high.\nMarket usually shouldn’t be gained early in the game. Without desirable cheap cards (e.g. Pixie, Fool's Gold) and before you have strong payload, you cannot utilize Market’s extra Buy efficiently. As such, buying a Market on your first two turns is generally a poor use of your opening. In the midgame, you should anticipate when an extra buy will allow you to gain extra cards and get Market shortly before this happens.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusBuy",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Upgrade": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Intrigue",
-      "cost": 5,
-      "type": {
-        "Action": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
+        "Mine": {
+            "description": "Costs 5 coins. When played You may trash a Treasure from your hand. Gain a Treasure to your hand costing up to 3 coins more than it.",
+            "strategy": "Mine is rarely worth gaining, primarily due to its high opportunity cost: it’s an expensive card at $5, a price point highly likely to offer something that will benefit your deck much more than Mine at any stage of the game.\nAlthough trashing your Coppers is usually an important objective, the primary reason to do so is to thin your deck by reducing the density of stop cards, allowing you to draw and play your powerful Action cards more frequently. Mine’s major weakness is that it doesn’t help with this goal, because it replaces Copper with another Treasure. Swapping Copper for Silver or Silver for Gold increases your purchasing power slightly (analogous to gaining a Peddler), but won’t do anything to help your deck run more smoothly. Mine is also very slow to enact these improvements: although you can at least play your new Treasure immediately, Mine only upgrades one Treasure at a time. Because this benefit is slow to accumulate, it has the greatest impact when Mine is acquired early; but as a payload card that doesn’t help with deck control, it’s a poor choice early on. Furthermore, as a terminal card, Mine competes for terminal space with other cards that are likely to have a much greater impact, such as draw cards like Smithy or more effective trashers like Chapel.\nMine might have a role to play when useful Kingdom Treasures such as Supplies are in the game and gains are otherwise severely limited. Gaining Ducat with Mine does provide a thinning effect, since you can trash an additional Copper; gaining Stockpile works similarly, since the Stockpile is Exiled when you play it. Finally, with Capitalism, Mine can gain certain Action cards, which is likely to be more powerful than gaining Treasures.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "trashCards",
+                    "params": {
+                        "amount": 1,
+                        "mandatory": true,
+                        "type": "Treasure"
+                    }
+                },
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "costingUpToMoreThanTrashed": 3,
+                        "intoHand": true,
+                        "type": "Treasure"
+                    }
+                }
+            ]
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Witch": {
+            "description": "Costs 5 coins. When played +2 Cards - Each other player gains a Curse.",
+            "strategy": "Witch is a curser and terminal draw card from the Base set. It can be centralizing in many Kingdoms, especially if trashing Curses is difficult.\nCurses in your opponents’ decks serve two primary purposes:\n* Curses are stop cards that reduce the average value of the cards in their deck. Adding more curses to your opponent’s deck makes it harder for them to draw through their deck. Lining up cards that benefit from being drawn together (e.g. Village/Smithy) becomes less likely.\n* Curses give negative VP if they are not trashed by the end of the game.\nBecause of this, Witch often leads to longer games.\nIn the absence of trashing, an initial priority should be to deal out more Curses than your opponents before the pile is empty. Purchasing an early Witch, ideally as your first $5 card, is a good way to ensure that you “win the Curse split”: dealing out more Curses than your opponents. A second Witch may help you distribute Curses even faster. Games with Witch and no trashing are likely to be slogs.\nEven when trashing is available, Witch can still be an efficient way to slow down your opponents’ decks, unless the trashing is very strong (e.g. kingdoms with Chapel). Getting control of your deck becomes more difficult if you need to trash Curses as well as your starting cards. Many trashers, such as Remodel, are bad at trashing Curses and are better at trashing your Estates. These trashers may be too slow to overcome an influx of Curses.\nAs a terminal draw card, Witch’s +2 Cards can be useful, but it is rarely used primarily for its draw. Early on, the drawing effect can help you afford more expensive cards and draw faster through your shuffle.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Base Set",
+            "cost": 5,
+            "type": {
+                "Action": true,
+                "Attack": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "attackGainCard",
+                    "params": {
+                        "name": "Curse"
+                    }
+                }
+            ]
         },
-        {
-          "name": "trashCards",
-          "params": {
-            "amount": 1,
-            "mandatory": true
-          }
+        "Courtyard": {
+            "description": "Costs 2 coins. When played +3 Cards - Put a card from your hand on top of your deck.",
+            "strategy": "Courtyard is a cheap terminal draw card with a bonus that offers some added flexibility. Because you must topdeck one card after drawing three, Courtyard only increases your net hand size by one, and is therefore rather weak (functionally a Moat) if you're forced to rely on it as your primary source of draw. However, there are a number of situations in which the ability to see a third card and exchange a card between your hand and deck makes it worthwhile. Courtyard can be a good choice of draw card for the early game and is sometimes a reasonable opening buy, since it allows you to cycle through your deck and afford more expensive cards without the risk of drawing another Action card dead: if you do, you can simply put it back on top for next turn. This is particularly useful when it's an even higher priority than usual to get through your early shuffles quickly without missing out on playing important cards, e.g. with Travellers. At this stage of the game, Courtyard's topdecking effect also allows for some beneficial transfer of payload between hands, creating a smoothing or spiking effect depending on the price points you are aiming for, and can help you engineer desirable collisions, e.g. a trasher with its preferred target. If deck control is not feasible, Courtyard's price point control can be very useful in a money strategy throughout the game. More commonly, deck control is feasible and you'll prefer to add stronger draw cards later to facilitate this, but a Courtyard or two can continue to play a role by enhancing your deck's reliability alongside the small amount of draw provided. For example, seeing an extra three cards early in the turn can help to ensure that you can find enough early villages to support your more powerful terminals; alternatively, if you have overdraw, it may be helpful to play Courtyard late in the turn and leave a useful engine component (e.g. a spare village, or a desirable target for an effect like Citadel or Mastermind) topdecked for your next hand. The ability to topdeck a card of your choice can also be useful mid-turn, forming a synergy between Courtyard and effects that interact with that card. For instance, with sufficient village support, you can topdeck an expensive card before playing Chariot Race, guarantee a hit with Vassal, or target a card to trash with Lookout.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Intrigue",
+            "cost": 2,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 3
+                    }
+                },
+                {
+                    "name": "putCardsOnDeck",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
         },
-        {
-          "name": "gainCard",
-          "params": {
-            "costingUpToMoreThanTrashed": 1,
-            "costExact": true
-          }
-        }
-      ]
-    },
-    "Harem": {
-      "supply": {
-        "2": 8,
-        "3": 12,
-        "4": 12
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Intrigue",
-      "cost": 2,
-      "type": {
-        "Treasure": true,
-        "Victory": true
-      },
-      "treasure": 2,
-      "victory": [
-        {
-          "type": "constant",
-          "params": {
-            "value": 2
-          }
-        }
-      ]
-    },
-    "Coin of the Realm": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Adventures",
-      "cost": 2,
-      "type": {
-        "Treasure": true,
-        "Reserve": true
-      },
-      "treasure": 1,
-      "effects": [
-        {
-          "name": "putInTavern"
-        }
-      ],
-      "tavernCondition": {
-        "name": "afterResolvingAction",
-        "effects": [
-          {
-            "name": "plusAction",
-            "params": {
-              "amount": 2
+        "Great Hall": {
+            "description": "Costs 3 coins. When played: +1 Card +1 Action. Counts as 1 Victory point.",
+            "strategy": "As a Victory card and cantrip, Great Hall provides a way to green while maintaining deck control. However, because it provides neither deck control nor payload, it contributes nothing to your deck's performance in the vast majority of cases, and is typically only worth adding when you're ready to start greening in the endgame, as otherwise there is the opportunity cost of the chance to build up your deck's capabilities. Great Hall becomes more appealing if the opportunity cost of gaining it is low, most often due to a Workshop variant, especially Ironworks and Groom which give extra benefits due to the dual-type nature of Great Hall. In the case of Groom, this can enable you to pursue a rush. More generally, if the opportunity cost is sufficiently low, it can be worth utilizing Great Hall for the following synergies: Cards that reward having dual-type cards, such as Ironmonger. Effects that rely on a high Action-density in your deck, such as Herald or Scrying Pool. Effects that synergize with cheap cantrips, especially bonus tokens. Effects that benefit from having Victory cards in your deck (such as Crossroads) or from gaining them (such as Battlefield).",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Intrigue",
+            "cost": 3,
+            "type": {
+                "Action": true,
+                "Victory": true
+            },
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": 1
+                    }
+                }
+            ],
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
+        },
+        "Upgrade": {
+            "description": "Costs 5 coins. When played +1 Card +1 Action - Trash a card from your hand. Gain a card costing exactly 1 coin more than it.",
+            "strategy": "Upgrade is a strong cantrip trasher. It has a trash-for-benefit effect similar to Remodel, but compared to Remodel variants, it is much more restrictive in what cards it can gain. One important difference is that Upgrade is a cantrip rather than a terminal stop card, and is therefore much easier to use in multiples because it both is non-terminal and reduces your hand size less. Additionally, Upgrade can only gain cards that cost exactly $1 more than the one trashed. This means that it can thin Copper and Curse by trashing them without gaining any other card (unless Poor House is in the Kingdom). On the other hand, it cannot be used for some lines of play that Remodelers usually enable, such as Remodeling Gold into Province or milling Provinces. Upgrade's role varies throughout the game. In the early game, it is very effective at upgrading Estates to better cards and thinning Coppers. As a cantrip, it provides minor cycling and terminal space flexibility that many other trashers do not, and so gaining an Upgrade as your first $5 card can be a good idea. Later in the game, Upgrade functions closer to a gainer that can often enable gain-and-play as it both draws a card and is non-terminal. Similar to other Remodel variants, Upgrade is most effective at this stage in helping you build when you can provide fodder for it in some way. Less often, it can help you score in the endgame by upgrading $4 cards into Duchies or (even more rarely) $7 cards into Provinces. Upgrade generally synergizes well with cards that can provide it more expensive fodder to Upgrade. Fortress is especially enticing, as a single copy of Fortress can be repeatedly upgraded to gain other $5 Actions, or even more copies of Upgrade to upgrade the same Fortress again. You can also use Rats to convert your starting cards into Rats, and then use Upgrade to upgrade the Rats into $5 Actions. Certain cards that you gain primarily for their on-gain effect, such as Cemetery, are also good targets. Upgrade is slightly more awkward with Shelters, as unless there are viable $2 Actions, it typically upgrades them into Estates. While those can later be upgraded again, this is slower since you need two Upgrade steps to get a useful card rather than one from Estate directly.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Intrigue",
+            "cost": 5,
+            "type": {
+                "Action": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "trashCards",
+                    "params": {
+                        "amount": 1,
+                        "mandatory": true
+                    }
+                },
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "costingUpToMoreThanTrashed": 1,
+                        "costExact": true
+                    }
+                }
+            ]
+        },
+        "Farm": {
+            "description": "Costs 6 coins. When played +2 Treasure. Counts as 2 Victory points.",
+            "strategy": "Farm suffers from many of the same problems as Gold—chiefly that it's an expensive stop card that usually has a high opportunity cost—while generating even less $, which makes it usually undesirable in an engine. At the same time, it is also worse than a cheaper Duchy at scoring  VP. However, the combination of both these effects in a single card does make it occasionally relevant, most often in money strategies. Like Duchy, Farm can be a useful option when you're employing a money strategy if you want to add  VP but cannot afford Province; its advantage over Duchy is that it allows you to continue increasing (rather than decreasing) your money density at the same time. This is especially relevant if you want to start greening early, for example with Hoard or Battlefield. However, you'll still sometimes prefer Gold over Farm when using a money strategy, especially if it's early in the game or if money density is even more important than usual, e.g. because Colony is present or you're facing a discarding attack. In an engine context, Farm is occasionally useful as a supplementary source of alt-VP that can allow you to score while building, in a fashion similar to Nobles. It can be a reasonable target for Treasure gainers such as Hero or Mint—although gaining these specifically for this purpose is unlikely to be the focal point of an efficient build, the ability to use a Treasure gainer to score may be important if there are no other sources of additional gains. Farm can also be useful as a Victory card that can be put into play, with effects such as Storyteller (where it functions as both  VP and draw) or gainers such as Kiln and Changeling (which cannot usually be used to score). Finally, the fact that Farm costs $6 means it can be relevant with Displace, which allows you to alternate between Exiling Farm and Province to gain a copy of the other card, thus scoring  VP with every play of Displace.",
+            "supply": {
+                "2": 8,
+                "3": 12,
+                "4": 12
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Intrigue",
+            "cost": 6,
+            "type": {
+                "Treasure": true,
+                "Victory": true
+            },
+            "treasure": 2,
+            "victory": [
+                {
+                    "type": "constant",
+                    "params": {
+                        "value": 2
+                    }
+                }
+            ]
+        },
+        "Coin of the Realm": {
+            "description": "Costs 2 coins. When you play this, +1 coin, and put it on your Tavern mat. Directly after resolving an Action, you may call this, for +2 Actions.",
+            "strategy": "Coin of the Realm is a Reserve Treasure that acts as a cheap and very flexible village, roughly comparable to two Villagers per play. Since it generates only as much $ as a Copper, its primary role is not as payload, but (unusually for a Treasure) to provide terminal space and reliability. Compared to most other villages, Coin of the Realm has a few distinguishing factors: First and foremost, Coin of the Realm operates on a delay: since it's usually impossible to play it during your Action phase, you instead need to play enough Coins during each Buy phase to fulfill your terminal space needs for the next turn. This means you need to have gained them even earlier. It also means that an unlucky turn in which you fail to draw enough Coins can make your next turn significantly worse too. Additionally, you will often want twice as many total copies as the number you need to call each turn; by calling one Coin and playing another (setting it up for next turn), you maintain a constant amount of terminal space. Effects that allow you to play and call the same copy in the same turn (e.g. Storyteller, Herb Gatherer, Fortune Hunter and Black Market), reduce this need for pairs of Coins. On the other hand, being able to call it whenever you need terminal space means that Coin of the Realm is very good for reliability. An engine with a more typical village can still often be improved by adding a couple Coins, which will help you avoid dud turns when your starting hand contains terminal draw without a village. Additionally, unlike other villages which are somewhat reliant on your deck control to ensure they collide with your terminals, Coin simply needs to be played before those terminals themselves collide. This means that it can be relatively more effective in decks that do not have much deck control, for example money strategies or early-game decks. As a Treasure, Coin of the Realm consumes no terminal space when played. This means it cannot be drawn dead, and that a single copy provides as much terminal space as two Village plays. One downside is that Coin is a stop card, so you'll need slightly more draw than you would with another village. Because of the above properties, the best time to add Coins to your deck differs from other villages. In the opening and early game it is similar to a Copper, slowing down your cycling without significantly helping you hit price points. However, because it is cheap and you need to account for its delayed nature, it can be a good idea to gain it when the opportunity cost is low and play it to set it up for future turns. Later in the game, sources of +Buy will help keep that opportunity cost low while building. Although Coin of the Realm's $1 is usually best thought of as a bonus and not the main reason to gain it, leaving Coins on your Tavern mat does slightly reduce the amount of payload you will have available next turn. This needs to be taken into consideration when you're deciding how much payload you need to add, and in rare cases it may be a good move to call a Coin even when you don't need the +Actions in order to increase your total payload for next turn.",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Adventures",
+            "cost": 2,
+            "type": {
+                "Treasure": true,
+                "Reserve": true
+            },
+            "treasure": 1,
+            "effects": [
+                {
+                    "name": "putInTavern"
+                }
+            ],
+            "tavernCondition": {
+                "name": "afterResolvingAction",
+                "effects": [
+                    {
+                        "name": "plusAction",
+                        "params": {
+                            "amount": 2
+                        }
+                    }
+                ]
             }
-          }
-        ]
-      }
-    },
-    "Page": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Adventures",
-      "cost": 2,
-      "type": {
-        "Action": true,
-        "Traveller": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
         },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
-        }
-      ],
-      "travellerUpgrade": "Treasure Hunter"
-    },
-    "Treasure Hunter": {
-      "excludeFromSupply": true,
-      "supply": {
-        "2": 5,
-        "3": 5,
-        "4": 5
-      },
-      "includeCondition": "page",
-      "set": "Adventures",
-      "cost": 3,
-      "type": {
-        "Action": true,
-        "Traveller": true
-      },
-      "effects": [
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
+        "Page": {
+            "description": "",
+            "strategy": "",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Adventures",
+            "cost": 2,
+            "type": {
+                "Action": true,
+                "Traveller": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ],
+            "travellerUpgrade": "Treasure Hunter"
         },
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 1
-          }
+        "Treasure Hunter": {
+            "description": "",
+            "strategy": "",
+            "excludeFromSupply": true,
+            "supply": {
+                "2": 5,
+                "3": 5,
+                "4": 5
+            },
+            "includeCondition": "page",
+            "set": "Adventures",
+            "cost": 3,
+            "type": {
+                "Action": true,
+                "Traveller": true
+            },
+            "effects": [
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "gainCardPerCardGainedByLastPlayer",
+                    "params": {
+                        "name": "Silver"
+                    }
+                }
+            ],
+            "travellerUpgrade": "Warrior"
         },
-        {
-          "name": "gainCardPerCardGainedByLastPlayer",
-          "params": {
-            "name": "Silver"
-          }
-        }
-      ],
-      "travellerUpgrade": "Warrior"
-    },
-    "Warrior": {
-      "excludeFromSupply": true,
-      "supply": {
-        "2": 5,
-        "3": 5,
-        "4": 5
-      },
-      "includeCondition": "page",
-      "set": "Adventures",
-      "cost": 4,
-      "type": {
-        "Action": true,
-        "Attack": true,
-        "Traveller": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 2
-          }
+        "Warrior": {
+            "description": "",
+            "strategy": "",
+            "excludeFromSupply": true,
+            "supply": {
+                "2": 5,
+                "3": 5,
+                "4": 5
+            },
+            "includeCondition": "page",
+            "set": "Adventures",
+            "cost": 4,
+            "type": {
+                "Action": true,
+                "Attack": true,
+                "Traveller": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "attackDiscardTrashPerTraveller",
+                    "params": {
+                        "trashMinCost": 3,
+                        "trashMaxCost": 4
+                    }
+                }
+            ],
+            "travellerUpgrade": "Hero"
         },
-        {
-          "name": "attackDiscardTrashPerTraveller",
-          "params": {
-            "trashMinCost": 3,
-            "trashMaxCost": 4
-          }
-        }
-      ],
-      "travellerUpgrade": "Hero"
-    },
-    "Hero": {
-      "excludeFromSupply": true,
-      "supply": {
-        "2": 5,
-        "3": 5,
-        "4": 5
-      },
-      "includeCondition": "page",
-      "set": "Adventures",
-      "cost": 5,
-      "type": {
-        "Action": true,
-        "Traveller": true
-      },
-      "effects": [
-        {
-          "name": "plusTreasure",
-          "params": {
-            "amount": 2
-          }
+        "Hero": {
+            "description": "",
+            "strategy": "",
+            "excludeFromSupply": true,
+            "supply": {
+                "2": 5,
+                "3": 5,
+                "4": 5
+            },
+            "includeCondition": "page",
+            "set": "Adventures",
+            "cost": 5,
+            "type": {
+                "Action": true,
+                "Traveller": true
+            },
+            "effects": [
+                {
+                    "name": "plusTreasure",
+                    "params": {
+                        "amount": 2
+                    }
+                },
+                {
+                    "name": "gainCard",
+                    "params": {
+                        "type": "Treasure"
+                    }
+                }
+            ],
+            "travellerUpgrade": "Champion"
         },
-        {
-          "name": "gainCard",
-          "params": {
-            "type": "Treasure"
-          }
-        }
-      ],
-      "travellerUpgrade": "Champion"
-    },
-    "Champion": {
-      "excludeFromSupply": true,
-      "supply": {
-        "2": 5,
-        "3": 5,
-        "4": 5
-      },
-      "includeCondition": "page",
-      "set": "Adventures",
-      "cost": 6,
-      "type": {
-        "Action": true,
-        "Duration": true
-      },
-      "conditions": [
-        {
-          "name": "onAttack",
-          "mandatory": true,
-          "effects": [
-            {
-              "name": "unaffectedByAttack"
+        "Champion": {
+            "description": "",
+            "strategy": "",
+            "excludeFromSupply": true,
+            "supply": {
+                "2": 5,
+                "3": 5,
+                "4": 5
+            },
+            "includeCondition": "page",
+            "set": "Adventures",
+            "cost": 6,
+            "type": {
+                "Action": true,
+                "Duration": true
+            },
+            "conditions": [
+                {
+                    "name": "onAttack",
+                    "mandatory": true,
+                    "effects": [
+                        {
+                            "name": "unaffectedByAttack"
+                        }
+                    ]
+                },
+                {
+                    "name": "afterResolvingAction",
+                    "mandatory": true,
+                    "effects": [
+                        {
+                            "name": "plusAction",
+                            "params": {
+                                "amount": 1
+                            }
+                        }
+                    ]
+                }
+            ],
+            "effects": [
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                }
+            ]
+        },
+        "Ratcatcher": {
+            "description": "",
+            "strategy": "",
+            "supply": {
+                "2": 10,
+                "3": 10,
+                "4": 10
+            },
+            "includeCondition": "kingdomCard",
+            "set": "Adventures",
+            "cost": 2,
+            "type": {
+                "Action": true,
+                "Reserve": true
+            },
+            "effects": [
+                {
+                    "name": "plusCard",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "plusAction",
+                    "params": {
+                        "amount": 1
+                    }
+                },
+                {
+                    "name": "putInTavern"
+                }
+            ],
+            "tavernCondition": {
+                "name": "onTurnStart",
+                "effects": [
+                    {
+                        "name": "trashCards",
+                        "params": {
+                            "amount": 1
+                        }
+                    }
+                ]
             }
-          ]
-        },
-        {
-          "name": "afterResolvingAction",
-          "mandatory": true,
-          "effects": [
-            {
-              "name": "plusAction",
-              "params": {
-                "amount": 1
-              }
-            }
-          ]
         }
-      ],
-      "effects": [
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
-        }
-      ]
-    },
-    "Ratcatcher": {
-      "supply": {
-        "2": 10,
-        "3": 10,
-        "4": 10
-      },
-      "includeCondition": "kingdomCard",
-      "set": "Adventures",
-      "cost": 2,
-      "type": {
-        "Action": true,
-        "Reserve": true
-      },
-      "effects": [
-        {
-          "name": "plusCard",
-          "params": {
-            "amount": 1
-          }
-        },
-        {
-          "name": "plusAction",
-          "params": {
-            "amount": 1
-          }
-        },
-        {
-          "name": "putInTavern"
-        }
-      ],
-      "tavernCondition": {
-        "name": "onTurnStart",
-        "effects": [
-          {
-            "name": "trashCards",
-            "params": {
-              "amount": 1
-            }
-          }
-        ]
-      }
     }
-  }
 }

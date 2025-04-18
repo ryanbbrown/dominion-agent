@@ -1,7 +1,7 @@
 const maybeConfig: { [key: string]: string } = {}
 
 // uncomment this line if you'd prefer not to use env variables
-// import config from "./config.json";
+import config from "./config.json";
 
 // Example format for config.json
 // {

@@ -12,13 +12,16 @@
     "build": "tsc"
   },
   "dependencies": {
-    "arpad": "2.0.0",
-    "random-js": "~1.0.4",
     "@anthropic-ai/sdk": "0.24.3",
+    "@langchain/core": "^0.3.45",
+    "@langchain/langgraph": "^0.2.64",
     "@lmstudio/sdk": "0.0.12",
+    "arg": "^5.0.2",
+    "arpad": "2.0.0",
     "openai": "4.53.2",
+    "random-js": "~1.0.4",
     "together-ai": "0.6.0-alpha.4",
-    "ts-node": "10.9.2",
+    "ts-node": "^10.9.2",
     "typescript": "5.4.5"
   }
 }
